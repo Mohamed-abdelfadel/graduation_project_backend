@@ -13,4 +13,4 @@ use \App\Http\Controllers\APIcontroller ;
 |
 */
 
-Route::get('/test' , [APIcontroller::class , 'view'])->name('api') ;
+Route::get('/games' , [APIcontroller::class , 'index'])->name('api') ;
