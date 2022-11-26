@@ -1,4 +1,4 @@
-<!-- @extends('layout')
+@extends('layout')
 @section('title')
     API's
 @endsection
@@ -9,5 +9,4 @@
     <div class="content m-3">
         <p> this is export of API</p>
     </div>
-@endsection -->
-<h1>Hello</h1>
+@endsection
