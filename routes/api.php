@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ApiController ;
+use App\Http\Controllers\GameController ;
+use App\Http\Controllers\NewsController ;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,4 +18,6 @@ use App\Http\Controllers\ApiController ;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/games' , [ApiController::class , 'index_api']) ;
+Route::get('/games' , [GameController::class , 'index_api']) ;
+Route::get('/news' , [NewsController::class , 'index_api']) ;
+
