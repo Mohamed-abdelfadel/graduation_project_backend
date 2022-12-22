@@ -7,18 +7,14 @@ use App\Http\Requests\StorenewsRequest;
 use App\Http\Requests\UpdatenewsRequest;
 class NewsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(){
-        $news = news::all() ;
-        return view('games') ;
+        $news = news::query()->orderBy('id' , 'desc')->paginate(3) ;
+        return view('games' , compact('news')) ;
     }
 
     public function index_api(){
-        $news = news::all() ;
+        $news = news::query()->orderBy('id' , 'desc')->paginate(3) ;
         return response()->json($news) ;
     }
 

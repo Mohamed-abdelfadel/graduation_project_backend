@@ -8,7 +8,8 @@
     </div>
     <div class="content m-3">
         <p class="fs-2"> this is export of Api</p>
-        <p class="fs-4"> {{__("messages.Welcome")}}</p>
-
+        @foreach($news as $new)
+        <p class="fs-4">{{$new->title}}</p>
+        @endforeach
     </div>
 @endsection
