@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
 
     public function index(){
-        $news = news::query()->orderBy('id' , 'desc')->paginate(3) ;
+        $news = news::query()->orderBy('id' , 'desc')->get() ;
         return view('games' , compact('news')) ;
     }
 

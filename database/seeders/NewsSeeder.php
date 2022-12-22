@@ -75,28 +75,16 @@ class NewsSeeder extends Seeder
             "author" => "VALORANT E-Sports ©",
         ]) ;
         News::create([
-            "image" => "" ,
-            "title" => "" ,
-            "description" => "",
-            "author" => "",
+            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/bltcf7da1dba92fc111/63479c4c2a8d0a11633dd0f4/GameChangers_Announcement_Header.jpg?width=1236&height=695" ,
+            "title" => "GAME CHANGERS WORLD CHAMPIONSHIP: LIVE AUDIENCE AND TICKET SALE INFORMATION" ,
+            "description" => "Today we are excited to share the initial details about live audience attendance and ticket sales for Game Changers World Championship!",
+            "author" => "VALORANT E-Sports ©",
         ]) ;
         News::create([
-            "image" => "" ,
-            "title" => "" ,
-            "description" => "",
-            "author" => "",
-        ]) ;
-        News::create([
-            "image" => "" ,
-            "title" => "" ,
-            "description" => "",
-            "author" => "",
-        ]) ;
-        News::create([
-            "image" => "" ,
-            "title" => "" ,
-            "description" => "",
-            "author" => "",
+            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blte0d225d7775f1733/633aad608076874bc1dcf3d9/1920x1080_VCT_BME_Announcement.jpg?width=1236&height=695" ,
+            "title" => "BME SUPERDOME WILL BE COMING TO CAIRO FOR THE VALORANT CHAMPIONS TOUR 2022 OFF//SEASON!" ,
+            "description" => "We’re happy to announce BME Superdome is joining the VALORANT Champions Tour (VCT) 2022 Off//Season, bringing a clash between European and MENA teams to the capital of Egypt, Cairo. The top 6 teams in the MENA region will be facing off against 2 of the very best from Europe for a chance to be crowned winners and lift the Superdome trophy in front of thousands of fans! Read on to find out more about the tournament’s format, dates, and the teams attending.",
+            "author" => "VALORANT E-Sports ©",
         ]) ;
 
 
