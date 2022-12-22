@@ -11,7 +11,7 @@ class GameController extends Controller
 
     public function index(){
         $games = Game::all() ;
-        return view('games') ;
+        return view('games')->orderBy('id' , 'desc')->paginate(3) ;
     }
 
     public function index_api(){

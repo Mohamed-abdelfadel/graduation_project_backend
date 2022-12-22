@@ -19,7 +19,7 @@ class NewsController extends Controller
 
     public function index_api(){
         $news = news::all() ;
-        return response()->json($news);
+        return response()->json($news) ;
     }
 
     /**
