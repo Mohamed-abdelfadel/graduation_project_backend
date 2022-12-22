@@ -14,7 +14,7 @@ class NewsController extends Controller
     }
 
     public function index_api(){
-        $news = news::query()->orderBy('id' , 'desc')->paginate(3) ;
+        $news = news::query()->orderBy('id' , 'desc')->paginate(9) ;
         return response()->json($news) ;
     }
 
