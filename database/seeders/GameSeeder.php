@@ -15,7 +15,7 @@ class GameSeeder extends Seeder
     public function run()
     {
         Game::create([
-            "image" => "https://yt3.googleusercontent.com/q7bQAvHp_Hb3k29VZWaYLosPDKT4DORz3CgHQESF52KuEEtsAyLx9F3OToP_ZTuFEGl70e7XYA=s540-w390-h540-c-k-c0x00ffffff-no-nd-rj" ,
+            "image" => "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_LeagueofLegends_RiotGames_S2_1200x1600-7fd64f0f7b674900bdd172967865d545" ,
             "name" => "League of Legends" ,
             "description" => "League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other’s base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory.",
             "company" => "Riot Games",
@@ -23,7 +23,7 @@ class GameSeeder extends Seeder
             ]) ;
 
         Game::create([
-            "image" => "https://yt3.googleusercontent.com/HAFku1ALrKk_KCS0QcMTxwz2BBOHOcxciIwrFsGAs9qrlbQNJuWkPtldNbDZv3Kh9tAp9XvI1w=s540-w390-h540-c-k-c0x00ffffff-no-nd-rj" ,
+            "image" => "https://static-cdn.jtvnw.net/ttv-boxart/516575-272x380.jpg" ,
             "name" => "Valorant" ,
             "description" => "VALORANT is a global arena in which you can compete. It is a 5v5 tactical shooter in which players can take turns planting and deactivating the spike with a system of 1 life per LI round in a series of 13 rounds. What you'll need more than guns and bullets is choosing an Operator equipped with fast, lethal, and adaptable abilities to create the right opportunities for you to dazzle everyone with your superior gun skills.",
             "company" => "Riot Games",
