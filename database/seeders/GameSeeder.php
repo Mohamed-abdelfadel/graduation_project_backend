@@ -31,7 +31,7 @@ class GameSeeder extends Seeder
         ]) ;
 
         Game::create([
-            "image" => "https://yt3.googleusercontent.com/K6gOSneCU4qtO-YXz748D_xNCFLWVWh-iaYeONnPN5uYO6zL6H4cBXtc20S0PE4CyBk-dYZm=s540-w390-h540-c-k-c0x00ffffff-no-nd-rj" ,
+            "image" => "https://cdn1.epicgames.com/offer/fn/23BR_C4S1_EGS_Launcher_Blade_1200x1600_1200x1600-708ad0c7e0813b60cb2fda3e24e39401" ,
             "name" => "Fortnite" ,
             "description" => "Fortnite is a third person shooter survival game where the player has to survive against up to 99 other players. The total player count for each battle royale is 100. The player can build forts through collecting materials such as metal, bricks, and wood, and collect weapons before fighting other players",
             "company" => "Epic Games",
