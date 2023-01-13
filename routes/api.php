@@ -18,6 +18,6 @@ use App\Http\Controllers\NewsController ;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/games' , [GameController::class , 'index_api']) ;
-Route::get('/news' , [NewsController::class , 'index_api']) ;
+Route::get('/v1/games' , [GameController::class , 'index_api']) ;
+Route::get('/v1/news' , [NewsController::class , 'index_api']) ;
 
