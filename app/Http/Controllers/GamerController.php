@@ -7,34 +7,42 @@ use Illuminate\Validation\Rules\Password;
 use App\Models\User;
 use App\Http\Requests\UpdateGamerRequest;
 use Illuminate\Support\Facades\validator;
-use Illuminate\Support\Facades\Auth;
 
 
 class GamerController extends Controller
 {
     public function login(Request $request){
-        $data = $request->only('email', 'password') ;
-        $rules = [
-            'email' => 'required|max:255|email:rfc,dns',
-            'password' => 'required',
-        ] ;
-        $validator = Validator::make($data,$rules) ;
-        $credentials = $request->only('email', 'password');
-//        return $credentials ;
-        if (Auth::attempt($credentials) and $validator->passes()) {
-            return response()->json(["message" => "Success"]);
+        $fields = $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string'
+        ]);
+
+        // Check email
+        $user = User::where('email', $fields['email'])->first();
+
+        // Check password
+        if(!$user || !Hash::check($fields['password'], $user->password)) {
+            return response([
+                'message' => 'Your email or password is not correct'
+            ], 401);
         }
-        else {
-            return response()->json(["message" => "Failed"]);
-        }
+
+        $token = $user->createToken('token')->plainTextToken;
+
+        $response = [
+            'user' => $user,
+            'token' => $token
+        ];
+
+        return response($response, 201);
     }
 
-    public function store(Request $request){
+    public function register(Request $request){
 
         $data = $request->all() ;
         $rules = [
-            'name' => 'required|unique:gamers,name|max:50' ,
-            'email' => 'required|unique:gamers,email|max:255|email:rfc,dns' ,
+            'name' => 'required|unique:users,name|max:50' ,
+            'email' => 'required|unique:users,email|max:255|email:rfc,dns' ,
             'password' => ['required', Password::min(8)->letters()->mixedCase()->numbers()->uncompromised()],
             'cpassword' => 'required|same:password'
         ] ;
@@ -44,6 +52,7 @@ class GamerController extends Controller
 
         ];
         $validator = Validator::make($data,$rules,$message) ;
+
         if ($validator->passes()){
             $user = new User() ;
             $user->name = request('name') ;
@@ -51,13 +60,24 @@ class GamerController extends Controller
             $user->password = Hash::make($request->password) ;
 //            $gamer->password = request('password') ;
             $user->save() ;
-            return ["message" => "Success"] ;
+
+
+            $token = $user->createToken('token')->plainTextToken ;
+
+            $response =[
+                "message" => "Success",
+                "token" => $token,
+                "user" => $user] ;
+            return response($response,201) ;
         }
         else{
             return $validator->errors();
         }
     }
-
+    public function logout(Request $request){
+        auth()->user()->tokens()->delete() ;
+        return ["message" => "logged out"] ;
+    }
     public function show(User $gamer){
 
     }

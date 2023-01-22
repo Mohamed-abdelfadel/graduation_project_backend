@@ -16,11 +16,16 @@ use App\Http\Controllers\GamerController ;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::get('/v1/games' , [GameController::class , 'index_api']) ;
-Route::get('/v1/news' , [NewsController::class , 'index_api']) ;
-Route::post('/v1/signup_data' , [GamerController::class , 'store']) ;
-Route::post('/v1/login_data' , [GamerController::class , 'login']) ;
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
 
+Route::group(['middleware' => ['auth:sanctum']] , function (){
+    Route::post('/v1/logout' , [GamerController::class , 'logout']) ;
+    Route::get('/v1/games' , [GameController::class , 'index_api']) ;
+
+
+});
+Route::post('/v1/login_data' , [GamerController::class , 'login']) ;
+Route::get('/v1/news' , [NewsController::class , 'index_api']) ;
+Route::post('/v1/signup_data' , [GamerController::class , 'register']) ;
