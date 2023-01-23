@@ -23,7 +23,7 @@ class GamerController extends Controller
         // Check password
         if(!$user || !Hash::check($fields['password'], $user->password)) {
             return response([
-                'message' => 'Your email or password is not correct'
+                'message' => 'Your Email or Password is not correct'
             ], 400);
         }
 
@@ -47,7 +47,8 @@ class GamerController extends Controller
             'cpassword' => 'required|same:password'
         ] ;
         $message= [
-            "unique:gamers" => "This :attribute has been used before." ,
+            "unique:users,name" => "This Name has been used before." ,
+            "unique:users,email" => "This Email has been used before." ,
             "same" => "Password and confirm password must be identically same",
 
         ];
