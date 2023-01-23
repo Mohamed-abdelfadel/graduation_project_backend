@@ -68,10 +68,10 @@ class GamerController extends Controller
                 "message" => "Success",
                 "token" => $token,
                 "user" => $user] ;
-            return response($response,201) ;
+            return response($response,200) ;
         }
         else{
-            return $validator->errors();
+            return response($validator->errors(),400);
         }
     }
     public function logout(Request $request){
