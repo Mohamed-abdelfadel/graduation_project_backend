@@ -24,7 +24,7 @@ class GamerController extends Controller
         if(!$user || !Hash::check($fields['password'], $user->password)) {
             return response([
                 'message' => 'Your email or password is not correct'
-            ], 401);
+            ], 400);
         }
 
         $token = $user->createToken('token')->plainTextToken;
@@ -34,7 +34,7 @@ class GamerController extends Controller
             'token' => $token
         ];
 
-        return response($response, 201);
+        return response($response, 200);
     }
 
     public function register(Request $request){
