@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('news', function (Blueprint $table) {
-            $table->id();
-            $table->string('image');
-            $table->string('title');
-            $table->longText('description');
-            $table->string('author');
-            $table->timestamp('date') ;
-            $table->timestamps();
+        Schema::table('news', function (Blueprint $table) {
+            $table->foreignId('game_id')->after('description')->index()->default('1') ;
+            $table->foreign('game_id')->references('id')->on('games')->onUpdate('CASCADE')->onDelete('RESTRICT');
         });
     }
 
@@ -31,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news');
+        Schema::table('news', function (Blueprint $table) {
+            //
+        });
     }
 };

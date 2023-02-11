@@ -17,7 +17,7 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'game_id' => rand(1 , 3),
         ];
     }
 }

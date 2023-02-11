@@ -17,7 +17,10 @@ class PlayerFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->firstNameMale,
+            'description' => fake()->text,
+            'game_id' => rand(1 , 3),
+            'team_id' => rand(1 , 30)
         ];
     }
 }

@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Team>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tournament>
  */
-class TeamFactory extends Factory
+class TournamentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,7 +19,10 @@ class TeamFactory extends Factory
         return [
             "name" => fake()->firstNameMale ,
             "description" => fake()->text,
-            "history" => fake()->text
+            "starting_date" => fake()->dateTimeThisYear,
+            "ending_date" => fake()->dateTimeThisYear,
+            'game_id' => rand(1 , 3),
+
         ];
     }
 }

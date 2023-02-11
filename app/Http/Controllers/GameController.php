@@ -11,19 +11,26 @@ class GameController extends Controller
 
     public function index(){
         $games = Game::all() ;
-        return view('games')->orderBy('id' , 'desc')->paginate(3) ;
-    }
-
-    public function index_api(){
-        $games = Game::all() ;
         return response()->json($games);
     }
 
-    public function create()
+
+
+    public function tournaments($id)
     {
-        //
+        $game = Game::query()->with('tournament')->findOrFail($id);
+        $data = array();
+        foreach ($game->tournament as $tournament){
+            $data[]=["id"=> $tournament->id ,"name"=> $tournament->name ,"logo"=> $tournament->logo];
+        }
+        return $data ;
     }
 
+    public function news($id)
+    {
+        $game = Game::query()->with('news')->findOrFail($id);
+        return response($game->news) ;
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -41,9 +48,10 @@ class GameController extends Controller
      * @param  \App\Models\Game  $game
      * @return \Illuminate\Http\Response
      */
-    public function show(Game $game)
+    public function show($id)
     {
-        //
+        $game = Game::query()->findOrFail($id);
+        return response($game) ;
     }
 
     /**

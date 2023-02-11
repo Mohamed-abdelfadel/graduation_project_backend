@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('players', function (Blueprint $table) {
-            $table->foreignId('game_id')->after('team_id')->index()->default('1') ;
+            $table->foreignId('game_id')->after('history')->index()->default('1') ;
             $table->foreign('game_id')->references('id')->on('games')->onUpdate('CASCADE')->onDelete('RESTRICT');
         });
     }
