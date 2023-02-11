@@ -1,16 +1,17 @@
 <?php
-
+/////////////////////////////////Resources/////////////////////////////////
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use App\Models\User;
 use App\Http\Requests\UpdateGamerRequest;
-use Illuminate\Support\Facades\validator;
+
 
 
 class GamerController extends Controller
 {
+/////////////////////////////////Login method/////////////////////////////////
     public function login(Request $request){
         $fields = $request->validate([
             'email' => 'required|string',
@@ -30,8 +31,9 @@ class GamerController extends Controller
         $token = $user->createToken('token')->plainTextToken;
 
         $response = [
-            'user' => $user,
-            'token' => $token
+            "message" => "Welcome back $user->name",
+            "user" => $user,
+            "token" => $token
         ];
 
         return response($response, 200);
@@ -39,41 +41,26 @@ class GamerController extends Controller
 
     public function register(Request $request){
 
-        $data = $request->all() ;
-        $rules = [
-            'name' => 'required|unique:users,name|max:50' ,
-            'email' => 'required|unique:users,email|max:255|email:rfc,dns' ,
-            'password' => ['required', Password::min(8)->letters()->mixedCase()->numbers()->uncompromised()],
-            'cpassword' => 'required|same:password'
-        ] ;
-        $message= [
-            "unique:users,name" => "This Name has been used before." ,
-            "unique:users,email" => "This Email has been used before." ,
-            "same" => "Password and confirm password must be identically same",
+        $fields = $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|string|unique:users,email',
+            'password' => 'required|string|confirmed'
+        ]);
 
+        $user = User::create([
+            'name' => $fields['name'],
+            'email' => $fields['email'],
+            'password' => bcrypt($fields['password'])
+        ]);
+
+        $token = $user->createToken('myapptoken')->plainTextToken;
+
+        $response = [
+            'user' => $user,
+            'token' => $token
         ];
-        $validator = Validator::make($data,$rules,$message) ;
 
-        if ($validator->passes()){
-            $user = new User() ;
-            $user->name = request('name') ;
-            $user->email = request('email') ;
-            $user->password = Hash::make($request->password) ;
-//            $gamer->password = request('password') ;
-            $user->save() ;
-
-
-            $token = $user->createToken('token')->plainTextToken ;
-
-            $response =[
-                "message" => "Success",
-                "token" => $token,
-                "user" => $user] ;
-            return response($response,200) ;
-        }
-        else{
-            return response($validator->errors(),400);
-        }
+        return response($response, 201);
     }
     public function logout(Request $request){
         auth()->user()->tokens()->delete() ;

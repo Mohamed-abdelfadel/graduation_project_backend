@@ -17,11 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('image');
             $table->string('name')->unique();
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->string('company');
             $table->date('published_date');
-
-
             $table->timestamps();
         });
     }

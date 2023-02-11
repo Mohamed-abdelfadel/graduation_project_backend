@@ -83,7 +83,7 @@ class NewsSeeder extends Seeder
         News::create([
             "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blte0d225d7775f1733/633aad608076874bc1dcf3d9/1920x1080_VCT_BME_Announcement.jpg?width=1236&height=695" ,
             "title" => "BME SUPERDOME WILL BE COMING TO CAIRO FOR THE VALORANT CHAMPIONS TOUR 2022 OFF//SEASON!" ,
-            "description" => "We’re happy to announce BME Superdome is joining the VALORANT Champions Tour (VCT) 2022 Off//Season, bringing a clash between European and MENA teams to the capital of Egypt, Cairo. The top 6 teams in the MENA region will be facing off against 2 of the very best from Europe for a chance to be crowned winners and lift the Superdome trophy in front of thousands of fans! Read on to find out more about the tournament’s format, dates, and the teams attending.",
+            "description" => "We’re happy to announce BME Superdome is joining the VALORANT Champions Tour (VCT) 2022 Off//Season, bringing a clash between European and MENA teams to the capital of Egypt, Cairo.",
             "author" => "VALORANT E-Sports ©",
         ]) ;
 

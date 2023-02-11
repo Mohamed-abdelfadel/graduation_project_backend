@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('gamers', function (Blueprint $table) {
-            $table->id();
-            $table->string("name") ;
-            $table->string("email") ;
-            $table->string("password") ;
-            $table->integer("role")->default(2) ;
-            $table->timestamps();
+        Schema::table('players', function (Blueprint $table) {
+            $table->foreignId('role_id')->after('history')->index()->default('3') ;
+            $table->foreign('role_id')->references('id')->on('roles')->onUpdate('CASCADE')->onDelete('RESTRICT');
         });
     }
 
@@ -30,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gamers');
+        Schema::table('players', function (Blueprint $table) {
+            //
+        });
     }
 };
