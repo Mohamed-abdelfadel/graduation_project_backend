@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('playoffs', function (Blueprint $table) {
+        Schema::create('duels', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('team1_score') ;
+            $table->string('team2_score') ;
+            $table->integer('live_status') ;
+            $table->timestamp('starting_date') ;
             $table->timestamps();
         });
     }
@@ -27,16 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('playoffs');
+        Schema::dropIfExists('duels');
     }
 };
-
-
-
-
-//
-//$table->foreignId('match')->index()->nullable() ;
-//$table->foreign('match')->references('id')->on('duels')->onUpdate('CASCADE')->onDelete('RESTRICT');
-//
-//$table->foreignId('winner')->index()->nullable() ;
-//$table->foreign('winner')->references('id')->on('teams')->onUpdate('CASCADE')->onDelete('RESTRICT');

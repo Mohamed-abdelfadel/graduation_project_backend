@@ -11,7 +11,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TournamentController ;
 use App\Http\Controllers\PlayerController ;
 use App\Http\Controllers\TeamController ;
-
+use App\Http\Controllers\PlayoffController;
+use App\Http\Controllers\DuelController ;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -45,7 +46,7 @@ Route::controller(GameController::class)->group(function () {
 });
 
 Route::controller(NewsController::class)->group(function () {
-    Route::get('/v1/news','index_api') ;
+    Route::get('/v1/news','index') ;
 });
 
 Route::controller(TeamController::class)->group(function () {
@@ -62,7 +63,10 @@ Route::controller(PlayerController::class)->group(function () {
     Route::get('/v1/players' ,'index');
 
 });
+Route::get('/v1/matches' ,[DuelController::class , 'index']);
+//Route::get('/v1/tournament-matches/{id}' ,[DuelController::class , 'tournament']);
 
+Route::get('/v1/playoffs' ,[PlayoffController::class , 'index']);
 
 
 
