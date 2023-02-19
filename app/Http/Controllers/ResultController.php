@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Duel;
+use App\Models\Result;
 use Illuminate\Http\Request;
 
-class DuelController extends Controller
+class ResultController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,30 +14,23 @@ class DuelController extends Controller
      */
     public function index()
     {
-        $matches = Duel::query()->orderBy('starting_date' , 'desc')->get();
-        $matches_data = array();
-        foreach ($matches as $match){
-            $matches_data[]=[
-                "id"=> $match->id ,
-                "playoff"=> $match->playoff->name,
-                "team1"=> [
-                    "id" => $match->team1->id,
-                    "name" => $match->team1->name,
-                    "logo" => $match->team1->logo,
-                    "score" => $match->team1_score,
+        $results = Result::query()->get();
+        $results_data = array();
+        foreach ($results as $result){
+            $results_data[]=[
+                "id"=> $result->id ,
+                "playoff"=> $result->playoff->name,
+                "winner_team"=> [
+                    "id" => $result->team->id,
+                    "name" => $result->team->name,
+                    "logo" => $result->team->logo,
+                    "score" => $result->duel->team1_score,
+
                 ],
-                "team2"=> [
-                    "id" => $match->team1->id,
-                    "name" => $match->team2->name,
-                    "logo" => $match->team2->logo,
-                    "score" => $match->team2_score,
-                ],
-                "tournament"=> $match->tournament->name,
-                "live_status"=> $match->live_status,
-                "starting_data" =>  $match->starting_date
+                "match_id"=> $result->duel->id,
             ];
         }
-            return response($matches_data) ;
+        return response($results_data) ;
     }
 
     /**

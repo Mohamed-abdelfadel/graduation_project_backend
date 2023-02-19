@@ -13,6 +13,7 @@ use App\Http\Controllers\PlayerController ;
 use App\Http\Controllers\TeamController ;
 use App\Http\Controllers\PlayoffController;
 use App\Http\Controllers\DuelController ;
+use App\Http\Controllers\ResultController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -67,6 +68,8 @@ Route::get('/v1/matches' ,[DuelController::class , 'index']);
 //Route::get('/v1/tournament-matches/{id}' ,[DuelController::class , 'tournament']);
 
 Route::get('/v1/playoffs' ,[PlayoffController::class , 'index']);
+
+Route::get('/v1/results' ,[ResultController::class , 'index']);
 
 
 

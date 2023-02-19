@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             PlayerSeeder::class,
             PlayoffSeeder::class,
             DuelSeeder::class,
+            ResultSeeder::class,
 
 
 

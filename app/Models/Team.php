@@ -20,4 +20,8 @@ class Team extends Model
     public function duel(){
         return $this->hasMany(Duel::class) ;
     }
+
+    public function result(){
+        return $this->hasMany(Result::class) ;
+    }
 }
