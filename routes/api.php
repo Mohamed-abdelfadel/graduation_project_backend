@@ -64,11 +64,15 @@ Route::controller(PlayerController::class)->group(function () {
     Route::get('/v1/players' ,'index');
 
 });
-Route::get('/v1/matches' ,[DuelController::class , 'index']);
-//Route::get('/v1/tournament-matches/{id}' ,[DuelController::class , 'tournament']);
+
+Route::controller(DuelController::class)->group(function () {
+    Route::get('/v1/matches','index');
+    Route::get('/v1/tournament-matches/{id}' ,'tournament');
+
+});
+
 
 Route::get('/v1/playoffs' ,[PlayoffController::class , 'index']);
-
 Route::get('/v1/results' ,[ResultController::class , 'index']);
 
 
