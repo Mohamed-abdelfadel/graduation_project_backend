@@ -23,6 +23,6 @@ class TournamentSeeder extends Seeder
 //            "ending_date" => "2022-09-29 6:00:00",
 //
 //        ]) ;
-        Tournament::factory(20)->create() ;
+        Tournament::factory(8)->create() ;
     }
 }

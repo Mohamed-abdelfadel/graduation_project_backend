@@ -20,7 +20,7 @@ class TeamFactory extends Factory
             "name" => fake()->firstNameMale ,
             "description" => fake()->text,
             "history" => fake()->text,
-            'tournament_id' => rand(1 , 20)
+            'tournament_id' => rand(1 , 8)
 
         ];
     }

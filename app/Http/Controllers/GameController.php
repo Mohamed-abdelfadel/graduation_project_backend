@@ -31,6 +31,11 @@ class GameController extends Controller
         $game = Game::query()->with('news')->findOrFail($id);
         return response($game->news) ;
     }
+
+    public function matches(){
+        $matches = Game::query()->with("tournaments:id,game_id,name,logo")->select("id" , "name")->get();
+        return response($matches) ;
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -50,8 +55,8 @@ class GameController extends Controller
      */
     public function show($id)
     {
-        $game = Game::query()->findOrFail($id);
-        return response($game) ;
+        $matches = Game::query()->with("tournaments:id,game_id,name,logo")->select("id" , "name")->findOrFail($id);
+        return response($matches) ;;
     }
 
     /**

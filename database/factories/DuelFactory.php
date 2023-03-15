@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Carbon;
+use Faker\Factory as Faker;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Duel>
@@ -16,6 +19,17 @@ class DuelFactory extends Factory
      */
     public function definition()
     {
+        // Generate a Faker instance
+        $faker = Faker::create();
+
+// Generate a random timestamp between yesterday and tomorrow
+        $timestamp = Carbon::yesterday()->timestamp + rand(0, Carbon::tomorrow()->timestamp - Carbon::yesterday()->timestamp);
+
+// Create a new Carbon instance from the generated timestamp
+        $fakeDate = Carbon::createFromTimestamp($timestamp);
+
+// Use the Faker instance to format the Carbon instance as a fake date
+        $fakeDateString = $faker->dateTimeBetween($fakeDate, Carbon::tomorrow())->format('Y-m-d H:i:s');
         return [
             'playoff_id' => rand(1 , 3),
             'game_id' => rand(1 , 3),
@@ -23,9 +37,9 @@ class DuelFactory extends Factory
             'team2_score' => rand(1 , 5),
             'team1_id' => rand(1 , 31),
             'team2_id' => rand(1 , 31),
-            'tournament_id' => rand(1 , 20),
+            'tournament_id' => rand(1 , 8),
             'live_status' => rand(0 , 1),
-            "starting_date" => fake()->dateTimeThisYear,
+            "starting_date" => $fakeDateString
 
         ];
     }

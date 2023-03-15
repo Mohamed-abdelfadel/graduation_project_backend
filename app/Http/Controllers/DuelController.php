@@ -51,34 +51,40 @@ class DuelController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function tournament($id){
-        $matches = Duel::query()->where("tournament_id" , "=" , "$id")->orderBy('starting_date' , 'desc')->get();
-        $matches_data = array();
-        foreach ($matches as $match){
-            $matches_data[]=[
-                "id"=> $match->id ,
-                "playoff"=> $match->playoff->name,
-                "team1"=> [
-                    "id" => $match->team1->id,
-                    "name" => $match->team1->name,
-                    "logo" => $match->team1->logo,
-                    "score" => $match->team1_score,
-                ],
-                "team2"=> [
-                    "id" => $match->team1->id,
-                    "name" => $match->team2->name,
-                    "logo" => $match->team2->logo,
-                    "score" => $match->team2_score,
-                ],
-                "tournament"=> [
-                    "id" => $match->tournament->id,
-                    "name" => $match->tournament->name,
-                    "logo" => $match->tournament->logo,
-                ],
-                "live_status"=> $match->live_status,
-                "starting_data" =>  $match->starting_date
-            ];
-        }
-        return response($matches_data) ;
+        $matches = Duel::query()->where("tournament_id" , "=" , "$id")
+            ->with("team1:id,name,logo")
+            ->with("team2:id,name,logo")
+            ->with("playoff:id,name")
+//            ->with("tournament:id,name,logo")
+            ->select("id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "live_status" , "starting_date")
+            ->orderBy('starting_date' , 'desc')->get();
+//        $matches_data = array();
+//        foreach ($matches as $match){
+//            $matches_data[]=[
+//                "id"=> $match->id ,
+//                "playoff"=> $match->playoff->name,
+//                "team1"=> [
+//                    "id" => $match->team1->id,
+//                    "name" => $match->team1->name,
+//                    "logo" => $match->team1->logo,
+//                    "score" => $match->team1_score,
+//                ],
+//                "team2"=> [
+//                    "id" => $match->team1->id,
+//                    "name" => $match->team2->name,
+//                    "logo" => $match->team2->logo,
+//                    "score" => $match->team2_score,
+//                ],
+//                "tournament"=> [
+//                    "id" => $match->tournament->id,
+//                    "name" => $match->tournament->name,
+//                    "logo" => $match->tournament->logo,
+//                ],
+//                "live_status"=> $match->live_status,
+//                "starting_data" =>  $match->starting_date
+//            ];
+//        }
+        return response($matches) ;
     }
 
     /**

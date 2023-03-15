@@ -15,6 +15,6 @@ class DuelSeeder extends Seeder
      */
     public function run()
     {
-        Duel::factory(100)->create() ;
+        Duel::factory(40)->create() ;
     }
 }

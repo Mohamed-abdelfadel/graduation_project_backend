@@ -44,6 +44,10 @@ Route::controller(GameController::class)->group(function () {
     Route::get('/v1/game-tournaments/{id}' ,'tournaments') ;
     Route::get('/v1/game/{id}' ,'show') ;
     Route::get('/v1/game-news/{id}' ,'news') ;
+    Route::get('/v1/matches' ,'matches') ;
+    Route::get('/v1/matches/{id}' ,'show') ;
+
+
 });
 
 Route::controller(NewsController::class)->group(function () {
@@ -59,6 +63,7 @@ Route::controller(TeamController::class)->group(function () {
 Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournaments' ,'index') ;
     Route::get('/v1/tournament-teams/{id}' ,'team') ;
+//    Route::get('/v1/tournaments-matches' ,'matches') ;
 
 });
 
@@ -68,8 +73,8 @@ Route::controller(PlayerController::class)->group(function () {
 });
 
 Route::controller(DuelController::class)->group(function () {
-    Route::get('/v1/matches','index');
-    Route::get('/v1/tournament-matches/{id}' ,'tournament');
+//    Route::get('/v1/matches','index');
+//    Route::get('/v1/tournament-matches/{id}' ,'tournament');
 
 });
 

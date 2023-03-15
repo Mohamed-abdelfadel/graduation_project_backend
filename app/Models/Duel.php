@@ -17,7 +17,7 @@ class Duel extends Model
     }
 
     public function team1(){
-        return $this->belongsTo(Team::class) ;
+        return $this->belongsTo(Team::class);
     }
 
     public function team2(){

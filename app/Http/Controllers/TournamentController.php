@@ -18,7 +18,7 @@ class TournamentController extends Controller
     Return response($tournaments) ;
     }
     public function matches(){
-        $tournaments = Tournament::query()->with('matches')->get();
+        $tournaments = Tournament::query()->with('duels:id,tournament_id,team1_id,team2_id,playoff_id')->select("")->get();
         return response($tournaments) ;
     }
 }

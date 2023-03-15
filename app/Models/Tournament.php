@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Tournament extends Model
 {
@@ -13,8 +14,16 @@ class Tournament extends Model
         return $this->hasMany(Team::class)->with("players:id,name,team_id,image") ;
     }
 
-    public function duel(){
-        return $this->hasMany(Duel::class) ;
+    public function duels(){
+        $date = date('Y-m-d') ;
+        $yesterday = Carbon::yesterday()->format('Y-m-d');
+        $tomorrow = Carbon::tomorrow()->format('Y-m-d');
+        return $this->hasMany(Duel::class)
+            ->with("team1:id,name,logo")
+            ->with("team2:id,name,logo")
+            ->with("playoff:id,name")
+            ->whereBetween('starting_date',[$yesterday, $tomorrow]);
+        //            ->with("tournament:id,name,logo")
     }
 
     public function game(){
