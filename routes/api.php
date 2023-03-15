@@ -53,12 +53,14 @@ Route::controller(NewsController::class)->group(function () {
 Route::controller(TeamController::class)->group(function () {
         Route::get('/v1/teams','index') ;
         Route::get('/v1/team-players/{id}' ,'players') ;
-    });
+
+});
 
 Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournaments' ,'index') ;
-    Route::get('/v1/tournament-teams/{id}' ,'teams') ;
-    });
+    Route::get('/v1/tournament-teams/{id}' ,'team') ;
+
+});
 
 Route::controller(PlayerController::class)->group(function () {
     Route::get('/v1/players' ,'index');

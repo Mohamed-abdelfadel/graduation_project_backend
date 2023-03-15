@@ -10,10 +10,10 @@ class Team extends Model
     use HasFactory;
 
     public function tournament(){
-        return $this->belongsToMany(Tournament::class) ;
+        return $this->belongsTo(Tournament::class) ;
     }
 
-    public function player(){
+    public function players(){
         return $this->hasMany(Player::class) ;
     }
 

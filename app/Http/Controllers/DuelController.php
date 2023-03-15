@@ -32,7 +32,12 @@ class DuelController extends Controller
                     "logo" => $match->team2->logo,
                     "score" => $match->team2_score,
                 ],
-                "tournament"=> $match->tournament->name,
+                "tournament"=> [
+                    "id" => $match->tournament->id,
+                    "name" => $match->tournament->name,
+                    "logo" => $match->tournament->logo,
+                ],
+                "game_id" => $match->game->id,
                 "live_status"=> $match->live_status,
                 "starting_data" =>  $match->starting_date
             ];
@@ -64,7 +69,11 @@ class DuelController extends Controller
                     "logo" => $match->team2->logo,
                     "score" => $match->team2_score,
                 ],
-                "tournament"=> $match->tournament->name,
+                "tournament"=> [
+                    "id" => $match->tournament->id,
+                    "name" => $match->tournament->name,
+                    "logo" => $match->tournament->logo,
+                ],
                 "live_status"=> $match->live_status,
                 "starting_data" =>  $match->starting_date
             ];

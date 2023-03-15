@@ -14,13 +14,7 @@ class NewsSeeder extends Seeder
      */
     public function run()
     {
-        News::create([
-            "image" => "https://cdn2.unrealengine.com/23comp-evergreens-br-social--1920x1080-22e5cd2fc82f.jpg" ,
-            "title" => "FORTNITE CHAPTER 4 SEASON 1 COMPETITIVE DETAILS" ,
-            "description" => "Welcome to Chapter 4 and a new competitive update. In Chapter 4 Season 1, competitive Fortnite will be continuing the Fortnite Divisional Cup weekly offerings, return to FNCS online competition, and introduce new competitive offerings such as Victory Cups, Fill Cups, Zero Build Cups, Collegiate Cups, and more.",
-            "author" => "FORTNITE E-Sports ©",
-            "game_id" => 3
-        ]) ;
+
         News::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt42d211245192af10/6391f39e3a0e946001a48bed/image_6483441_(1).JPG?width=1600&height=900" ,
             "title" => "Save the Date for LEC Winter 2023 and Season Kickoff Tickets!" ,
@@ -48,13 +42,6 @@ class NewsSeeder extends Seeder
             "description" => "Everything you need to know about the upcoming international capstone event for Game Changers 2022.",
             "author" => "VALORANT E-Sports ©",
             "game_id" => 1
-        ]) ;
-        News::create([
-            "image" => "https://lh6.googleusercontent.com/U3nkcfWoB0oVaXGWW-ZlYT1a8v56M8WrgxQZeCGe0CfMAOWJ0ywzUBmwXA29scSVAheVcULqEJZUWQ47vjYQgHnOv5ZQrIadc4qQQlWDtZqLsSfrPAaTZI5uguJO2MiuLSk6Kv0MetLQ02qjcsvJLNESSiZb8r8emHCDa77X7fkiTEk6EtWiDM5rtw" ,
-            "title" => "FORTNITE CHAPTER 3 SEASON 4 COMPETITIVE DETAILS" ,
-            "description" => "It’s almost time for a new Fortnite Season, and with a new Season comes a new competitive update. In Chapter 3 - Season 4, the Competitive Fortnite team is shaking things up with a brand new Fortnite Divisional Cup format, an Arena Hype reset at the beginning of the Fortnite Season, Late Game Cups, Zero Build Cups, Collegiate Cups, and more!",
-            "author" => "FORTNITE E-Sports ©",
-            "game_id" => 3
         ]) ;
         News::create([
             "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blt281287d5ec56a983/6391af859ec8cb5e23a5c31f/VCT_EMEA_2023_Vision_&_Format.jpg?width=1236&height=695" ,

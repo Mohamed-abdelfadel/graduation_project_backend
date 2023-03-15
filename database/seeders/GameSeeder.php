@@ -31,11 +31,11 @@ class GameSeeder extends Seeder
         ]) ;
 
         Game::create([
-            "image" => "https://cdn1.epicgames.com/offer/fn/23BR_C4S1_EGS_Launcher_Blade_1200x1600_1200x1600-708ad0c7e0813b60cb2fda3e24e39401" ,
-            "name" => "Fortnite" ,
-            "description" => "Fortnite is a third person shooter survival game where the player has to survive against up to 99 other players. The total player count for each battle royale is 100. The player can build forts through collecting materials such as metal, bricks, and wood, and collect weapons before fighting other players",
-            "company" => "Epic Games",
-            "published_date" => "2017-7-21"
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Rocket_League_coverart.jpg/600px-Rocket_League_coverart.jpg" ,
+            "name" => "Rocket League" ,
+            "description" => "Rocket League is a fantastical sport-based video game, developed by Psyonix. It features a competitive game mode based on teamwork and outmaneuvering opponents. Players work with their team to advance the ball down the field, and score goals in their opponents' net.",
+            "company" => "Psyonix",
+            "published_date" => "2015-7-21"
         ]) ;
     }
 }

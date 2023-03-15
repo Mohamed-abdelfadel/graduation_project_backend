@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\TournamentController;

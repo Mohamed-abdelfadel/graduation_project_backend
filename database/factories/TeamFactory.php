@@ -19,7 +19,9 @@ class TeamFactory extends Factory
         return [
             "name" => fake()->firstNameMale ,
             "description" => fake()->text,
-            "history" => fake()->text
+            "history" => fake()->text,
+            'tournament_id' => rand(1 , 20)
+
         ];
     }
 }

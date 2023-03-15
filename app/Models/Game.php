@@ -16,4 +16,7 @@ class Game extends Model
     public function news(){
         return $this->hasMany(News::class) ;
     }
+    public function duels(){
+        return $this->hasMany(Duel::class) ;
+    }
 }
