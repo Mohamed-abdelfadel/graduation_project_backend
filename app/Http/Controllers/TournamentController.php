@@ -10,16 +10,25 @@ class TournamentController extends Controller
 {
     public function index()
     {
-        $tournaments = Tournament::query()->select('id' , 'logo' , 'name' , 'starting_date' ,'ending_date')->get() ;
+        $tournaments = Tournament::query()->select('id' , 'logo' , 'name' , 'starting_date')->get() ;
         return response($tournaments) ;
     }
     public function team($id){
-    $tournaments = Tournament::query()->select(['id', 'name', 'logo'])->with("teams:id,tournament_id,logo")->orderBy('starting_date' , 'desc')->findOrFail($id);
+    $tournaments = Tournament::query()->select(['id', 'name', 'logo'])->with("teams_with_players:id,tournament_id,logo")->orderBy('starting_date' , 'desc')->findOrFail($id);
     Return response($tournaments) ;
     }
-    public function matches(){
-        $tournaments = Tournament::query()->with('duels:id,tournament_id,team1_id,team2_id,playoff_id')->select("")->get();
+    public function duels($id){
+        $tournaments = Tournament::query()->with('duels:id,tournament_id,team1_id,team2_id,playoff_id')->findOrFail($id);
         return response($tournaments) ;
+    }
+
+    public function show($id){
+        $tournament = Tournament::query()->select(['id', 'name', 'logo','description','total_prize','location','starting_date','first_team_prize','second_team_prize','third_team_prize'])->with('teams:id,tournament_id,name,logo,matches_played,wins,loses')->findOrFail($id);
+        return $tournament;
+    }
+    public function news(){
+        $news = Tournament::query()->select(['id', 'name', 'logo'])->with("news")->get();
+        return response($news) ;
     }
 }
 //$tournaments = Tournament::query()->with("teams")->orderBy('starting_date' , 'desc')->get();

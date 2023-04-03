@@ -63,7 +63,10 @@ Route::controller(TeamController::class)->group(function () {
 Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournaments' ,'index') ;
     Route::get('/v1/tournament-teams/{id}' ,'team') ;
-//    Route::get('/v1/tournaments-matches' ,'matches') ;
+    Route::get('/v1/tournament/{id}' ,'show') ;
+    Route::get('/v1/tournament-matches/{id}' ,'duels') ;
+    Route::get('/v1/tournament-news' ,'news') ;
+
 
 });
 

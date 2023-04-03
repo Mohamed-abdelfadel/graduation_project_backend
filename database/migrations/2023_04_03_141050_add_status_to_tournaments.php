@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('duels', function (Blueprint $table) {
-            $table->id();
-            $table->string('team1_score') ;
-            $table->string('team2_score') ;
-            $table->timestamp('starting_date') ;
-            $table->timestamps();
+        Schema::table('tournaments', function (Blueprint $table) {
+            $table->foreignId('status_id')->index()->after('starting_date')->default('1') ;
+            $table->foreign('status_id')->references('id')->on('statuses')->onUpdate('CASCADE')->onDelete('RESTRICT');
         });
     }
 
@@ -29,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('duels');
+        Schema::table('tournaments', function (Blueprint $table) {
+            //
+        });
     }
 };

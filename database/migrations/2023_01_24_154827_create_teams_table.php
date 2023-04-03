@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('logo')->default('https://www.precisionpass.co.uk/wp-content/uploads/2018/03/default-team-logo.png');
             $table->string('name');
+            $table->integer('matches_played')->default(0);
+            $table->integer('wins')->default(0);
+            $table->integer('loses')->default(0);
             $table->longText('description')->nullable();
             $table->longText('history')->nullable();
             $table->timestamps();

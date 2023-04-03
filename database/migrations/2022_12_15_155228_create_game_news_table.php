@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('duels', function (Blueprint $table) {
+        Schema::create('game_news', function (Blueprint $table) {
             $table->id();
-            $table->string('team1_score') ;
-            $table->string('team2_score') ;
-            $table->timestamp('starting_date') ;
+            $table->string('image');
+            $table->string('title');
+            $table->longText('description');
+            $table->string('author');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('duels');
+        Schema::dropIfExists('game_news');
     }
 };

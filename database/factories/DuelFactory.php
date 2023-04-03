@@ -38,8 +38,8 @@ class DuelFactory extends Factory
             'team1_id' => rand(1 , 31),
             'team2_id' => rand(1 , 31),
             'tournament_id' => rand(1 , 8),
-            'live_status' => rand(0 , 1),
-            "starting_date" => $fakeDateString
+            "starting_date" => $fakeDateString,
+            'status_id' => rand(1 , 3)
 
         ];
     }
