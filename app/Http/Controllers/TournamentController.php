@@ -27,7 +27,7 @@ class TournamentController extends Controller
     }
 
     public function show($id){
-        $tournament = Tournament::query()->select(['id', 'name', 'logo','description','total_prize','location','starting_date','first_team_prize','second_team_prize','third_team_prize'])->with('teams:id,tournament_id,name,logo,matches_played,wins,loses')->findOrFail($id);
+        $tournament = Tournament::query()->select(['id', 'name', 'logo','description','total_prize','location','starting_date','first_team_prize','second_team_prize','third_team_prize'])->findOrFail($id);
         return $tournament;
     }
     public function news(){
