@@ -14,11 +14,15 @@ class TournamentController extends Controller
         return response($tournaments) ;
     }
     public function team($id){
-    $tournaments = Tournament::query()->select(['id', 'name', 'logo'])->with("teams_with_players:id,tournament_id,logo")->orderBy('starting_date' , 'desc')->findOrFail($id);
+    $tournaments = Tournament::query()->select(['id'])->with("teams_with_players:id,tournament_id,logo,name")->orderBy('starting_date' , 'desc')->findOrFail($id);
     Return response($tournaments) ;
     }
+//    public function teams($id){
+//        $tournaments = Tournament::query()->select(['id'])->with("teams:id,tournament_id,logo,matches_played,wins,loses")->findOrFail($id);
+//        Return response($tournaments) ;
+//    }
     public function duels($id){
-        $tournaments = Tournament::query()->with('duels:id,tournament_id,team1_id,team2_id,playoff_id')->findOrFail($id);
+        $tournaments = Tournament::query()->select(['id'])->with('duels:id,tournament_id,team1_id,team2_id,playoff_id')->findOrFail($id);
         return response($tournaments) ;
     }
 

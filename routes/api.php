@@ -2,6 +2,7 @@
 
 /////////////////////////////////resources/////////////////////////////////
 
+use App\Http\Controllers\GameNewsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -43,16 +44,20 @@ Route::controller(GameController::class)->group(function () {
     Route::get('/v1/games' ,'index') ;
     Route::get('/v1/game-tournaments/{id}' ,'tournaments') ;
     Route::get('/v1/game/{id}' ,'show') ;
-    Route::get('/v1/game-news/{id}' ,'news') ;
+    Route::get('/v1/game-news/{id}' ,'newss') ;
+    Route::get('/v1/game-news' ,'news') ;
+
     Route::get('/v1/matches' ,'matches') ;
     Route::get('/v1/matches/{id}' ,'show') ;
 
 
 });
-
-Route::controller(NewsController::class)->group(function () {
+Route::controller(GameNewsController::class)->group(function () {
     Route::get('/v1/news','index') ;
 });
+//Route::controller(NewsController::class)->group(function () {
+//    Route::get('/v1/news','index') ;
+//});
 
 Route::controller(TeamController::class)->group(function () {
         Route::get('/v1/teams','index') ;

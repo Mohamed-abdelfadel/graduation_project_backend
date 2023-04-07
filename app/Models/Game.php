@@ -13,7 +13,7 @@ class Game extends Model
         return $this->hasMany(Tournament::class)->with("duels:id,tournament_id,team1_id,team2_id,playoff_id,team1_score,team2_score,starting_date,status_id") ;
     }
     public function news(){
-        return $this->hasMany(News::class) ;
+        return $this->hasMany(Game_news::class) ;
     }
     public function duels(){
         return $this->hasMany(Duel::class) ;

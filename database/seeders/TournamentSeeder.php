@@ -25,7 +25,7 @@ class TournamentSeeder extends Seeder
             "first_team_prize" => 2000,
             "second_team_prize" => 1250,
             "third_team_prize" => 750,
-            "starting_date" => "2022-04-03 1:00:00",
+            "starting_date" => "2022-04-07 1:00:00",
             "status_id" => 1
 
         ]) ;
@@ -39,7 +39,7 @@ class TournamentSeeder extends Seeder
             "first_team_prize" => 2000,
             "second_team_prize" => 1250,
             "third_team_prize" => 750,
-            "starting_date" => "2022-04-03 1:00:00",
+            "starting_date" => "2022-04-07 1:00:00",
             "status_id" => 1
 
         ]) ;

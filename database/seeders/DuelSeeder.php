@@ -24,7 +24,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 1,
             "team2_id" => 2,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-03 0:01:44",
+            "starting_date" => "2023-04-07 0:01:44",
             "status_id" => 1
 
         ]) ;
@@ -36,7 +36,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 3,
             "team2_id" => 4,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-03 0:03:44",
+            "starting_date" => "2023-04-07 0:03:44",
             "status_id" => 2
 
         ]) ;
@@ -48,7 +48,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 5,
             "team2_id" => 1,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-03 0:04:44",
+            "starting_date" => "2023-04-07 0:04:44",
             "status_id" => 3
 
         ]) ;
@@ -60,7 +60,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 3,
             "team2_id" => 2,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-03 0:05:44",
+            "starting_date" => "2023-04-07 0:05:44",
             "status_id" => 3
 
         ]) ;
@@ -72,7 +72,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 5,
             "team2_id" => 6,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-03 0:06:44",
+            "starting_date" => "2023-04-07 0:06:44",
             "status_id" => 3
 
         ]) ;

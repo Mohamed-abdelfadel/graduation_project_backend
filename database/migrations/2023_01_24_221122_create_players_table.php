@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->default('https://icon-library.com/images/default-user-icon/default-user-icon-13.jpg');
+            $table->string('image')->default('https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1024px-Flag_of_Brazil.svg.png');
             $table->string('name');
             $table->longText('description')->nullable();
             $table->longText('history')->nullable();

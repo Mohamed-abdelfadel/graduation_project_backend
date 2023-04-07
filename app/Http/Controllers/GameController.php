@@ -29,7 +29,7 @@ class GameController extends Controller
     public function news($id)
     {
         $game = Game::query()->with('news')->findOrFail($id);
-        return response($game->news) ;
+        return response($game) ;
     }
 
     public function matches(){
