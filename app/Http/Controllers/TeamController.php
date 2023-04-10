@@ -1,12 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Player;
 use App\Models\team;
-use App\Models\Tournament;
 use Illuminate\Http\Request;
-
 class TeamController extends Controller
 {
 
@@ -27,25 +23,6 @@ class TeamController extends Controller
 
         return $data ;
     }
-
-//    public function tournaments($id){
-//        $tournaments = Tournament::query()->with('team')->get() ;
-//        $teams = Team::query()->with("player")->get();
-//        $teams_data = array();
-//        foreach ($teams as $team){
-//            $teams_data[]=[
-//                "id"=> $team->id ,
-//                "team"=> ["players" => $team->player,],
-//            ];
-//        }
-//        foreach ($tournaments as $tournament){
-//            $tournament_data[]=[
-//                "id"=> $team->id ,
-//                "team"=>  $tournament->team,
-//            ];
-//        }
-//        return response($tournament_data) ;
-//    }
     /**
      * Store a newly created resource in storage.
      *
