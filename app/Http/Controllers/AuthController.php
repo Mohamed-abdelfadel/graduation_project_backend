@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User ;
-use respo
+use http\Env\Response ;
 class AuthController extends Controller
 {
     /**
