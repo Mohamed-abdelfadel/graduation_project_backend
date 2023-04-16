@@ -56,4 +56,3 @@ class TournamentController extends Controller
 
 //  TODO-> Start working on ADMIN pages (Store , Update , Delete):
 }
-
