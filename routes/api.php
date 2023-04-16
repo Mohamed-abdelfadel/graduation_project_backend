@@ -3,18 +3,13 @@
 /////////////////////////////////resources/////////////////////////////////
 
 use App\Http\Controllers\GameNewsController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\GamerController ;
 use App\Http\Controllers\GameController ;
-use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TournamentController ;
 use App\Http\Controllers\PlayerController ;
 use App\Http\Controllers\TeamController ;
-use App\Http\Controllers\PlayoffController;
 use App\Http\Controllers\DuelController ;
-use App\Http\Controllers\ResultController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -29,66 +24,63 @@ use App\Http\Controllers\ResultController;
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
-/////////////////////////////////secured routes/////////////////////////////////
+
+// USAGE-> SECURED routes
 route::group(['middleware' => ['auth:sanctum']] , function (){
     route::post('/v1/logout' , [GamerController::class , 'logout']) ;
 });
+// USAGE-> PUBLIC routes >>
 
-/////////////////////////////////public routes/////////////////////////////////
-Route::controller(GamerController::class)->group(function () {
-    Route::post('/v1/login_data' ,'login') ;
-    Route::post('/v1/signup_data','register') ;
-});
-
+//USAGE-> GAMER routes
+//Route::controller(GamerController::class)->group(function () {
+//    Route::post('/v1/login_data' ,'login') ;
+//    Route::post('/v1/signup_data','register') ;
+//});
+// USAGE-> GAME routes
 Route::controller(GameController::class)->group(function () {
     Route::get('/v1/games' ,'index') ;
     Route::get('/v1/game-tournaments/{id}' ,'tournaments') ;
     Route::get('/v1/game/{id}' ,'show') ;
     Route::get('/v1/game-news/{id}' ,'newss') ;
     Route::get('/v1/game-news' ,'news') ;
-
     Route::get('/v1/matches' ,'matches') ;
     Route::get('/v1/matches/{id}' ,'show') ;
-
-
 });
+
+// USAGE-> GAME_NEWS routes
 Route::controller(GameNewsController::class)->group(function () {
     Route::get('/v1/news','index') ;
 });
-//Route::controller(NewsController::class)->group(function () {
-//    Route::get('/v1/news','index') ;
-//});
 
+// USAGE-> TEAM routes
 Route::controller(TeamController::class)->group(function () {
         Route::get('/v1/teams','index') ;
         Route::get('/v1/team-players/{id}' ,'players') ;
-
 });
 
+// USAGE-> TOURNAMENT routes
 Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournaments' ,'index') ;
     Route::get('/v1/tournament-teams/{id}' ,'team') ;
     Route::get('/v1/tournament/{id}' ,'show') ;
     Route::get('/v1/tournament-matches/{id}' ,'duels') ;
     Route::get('/v1/tournament-news' ,'news') ;
-
-
 });
 
+
+// USAGE-> PLAYER routes
 Route::controller(PlayerController::class)->group(function () {
     Route::get('/v1/players' ,'index');
 
 });
 
+// USAGE-> DUELS(MATCHES) routes
 Route::controller(DuelController::class)->group(function () {
-//    Route::get('/v1/matches','index');
+    Route::get('/v1/matchess','index');
 //    Route::get('/v1/tournament-matches/{id}' ,'tournament');
-
 });
-
-
-Route::get('/v1/playoffs' ,[PlayoffController::class , 'index']);
-Route::get('/v1/results' ,[ResultController::class , 'index']);
+//Route::get('/v1/playoffs' ,[PlayoffController::class , 'index']);
+//Route::get('/v1/results' ,[ResultController::class , 'index']);
 
 
 

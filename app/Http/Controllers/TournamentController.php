@@ -20,7 +20,7 @@ class TournamentController extends Controller
         $tournament = Tournament::query()
             ->select(['id', 'name', 'logo','description','total_prize','location','starting_date','first_team_prize','second_team_prize','third_team_prize'])
             ->findOrFail($id);
-        return $tournament;
+        return response($tournament);
     }
 
 //  USAGE-> Getting all TEAMS reference to Tournament->id

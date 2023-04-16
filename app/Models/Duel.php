@@ -16,12 +16,13 @@ class Duel extends Model
         return $this->belongsTo(Tournament::class) ;
     }
 
-    public function team1(){
-        return $this->belongsTo(Team::class);
+    public function team_1()
+    {
+        return $this->belongsTo(Team::class , "team1_id" , "id" );
     }
-
-    public function team2(){
-        return $this->belongsTo(Team::class) ;
+    public function team_2()
+    {
+        return $this->belongsTo(Team::class , "team2_id" , "id" );
     }
     public function game(){
         return $this->belongsTo(Game::class) ;
