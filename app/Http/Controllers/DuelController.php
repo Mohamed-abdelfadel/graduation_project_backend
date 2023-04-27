@@ -12,36 +12,38 @@ class DuelController extends Controller
     public function index()
     {
         $matches = Duel::query()
-            ->orderBy('starting_date' , 'desc')
-            ->get();
-        $matches_data = array();
-        foreach ($matches as $match){
-            $matches_data[]=[
-                "id"=> $match->id ,
-                "playoff"=> $match->playoff->name,
-                "team1"=> [
+            ->select("id","tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date")
+            ->with("team1:id,name,logo")
+            ->with("team2:id,name,logo")
+            ->with("playoff:id,name")
+            ->with("tournament:id,name,logo")
+            ->orderBy('starting_date' , 'desc')->get();
+        $matches_data = $matches->map(function ($match) {
+            return [
+                "id" => $match->id,
+                "playoff" => $match->playoff->name,
+                "team1" => [
                     "id" => $match->team1->id,
                     "name" => $match->team1->name,
                     "logo" => $match->team1->logo,
                     "score" => $match->team1_score,
                 ],
-                "team2"=> [
-                    "id" => $match->team1->id,
+                "team2" => [
+                    "id" => $match->team2->id,
                     "name" => $match->team2->name,
                     "logo" => $match->team2->logo,
                     "score" => $match->team2_score,
                 ],
-                "tournament"=> [
+                "tournament" => [
                     "id" => $match->tournament->id,
                     "name" => $match->tournament->name,
                     "logo" => $match->tournament->logo,
                 ],
-                "game_id" => $match->game->id,
-                "live_status"=> $match->live_status,
-                "starting_data" =>  $match->starting_date
+                "live_status" => $match->status_id,
+                "starting_date" => $match->starting_date,
             ];
-        }
-            return response($matches) ;
+        });
+            return response($matches_data) ;
     }
 
     /**

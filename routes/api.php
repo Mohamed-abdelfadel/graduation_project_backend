@@ -10,6 +10,7 @@ use App\Http\Controllers\TournamentController ;
 use App\Http\Controllers\PlayerController ;
 use App\Http\Controllers\TeamController ;
 use App\Http\Controllers\DuelController ;
+use App\Events\PlaygroundEvent ;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -62,6 +63,7 @@ Route::controller(TeamController::class)->group(function () {
 Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournaments' ,'index') ;
     Route::get('/v1/tournament-teams/{id}' ,'team') ;
+    Route::get('/v1/tournament-overview/{id}' ,'teams') ;
     Route::get('/v1/tournament/{id}' ,'show') ;
     Route::get('/v1/tournament-matches/{id}' ,'duels') ;
     Route::get('/v1/tournament-news' ,'news') ;
@@ -71,7 +73,6 @@ Route::controller(TournamentController::class)->group(function () {
 // USAGE-> PLAYER routes
 Route::controller(PlayerController::class)->group(function () {
     Route::get('/v1/players' ,'index');
-
 });
 
 // USAGE-> DUELS(MATCHES) routes
@@ -79,7 +80,9 @@ Route::controller(DuelController::class)->group(function () {
     Route::get('/v1/matchess','index');
 //    Route::get('/v1/tournament-matches/{id}' ,'tournament');
 });
-//Route::get('/v1/playoffs' ,[PlayoffController::class , 'index']);
+Route::get('/playground', function (){
+    event(PlaygroundEvent::broadcast());
+});
 //Route::get('/v1/results' ,[ResultController::class , 'index']);
 
 

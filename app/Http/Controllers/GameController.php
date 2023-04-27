@@ -33,7 +33,10 @@ class GameController extends Controller
     }
 
     public function matches(){
-        $matches = Game::query()->with("tournaments:id,game_id,name,logo")->select("id" , "name")->get();
+        $matches = Game::query()
+            ->select("id" , "name")
+            ->with("tournaments:id,game_id,name,logo")
+            ->get();
         return response($matches) ;
     }
     /**

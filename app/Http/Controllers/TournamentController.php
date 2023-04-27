@@ -5,6 +5,7 @@ use App\Models\Tournament;
 
 class TournamentController extends Controller
 {
+
 //  USAGE-> Getting all TOURNAMENTS
 //  API-> /v1/tournaments
     public function index(){
@@ -16,6 +17,8 @@ class TournamentController extends Controller
 
 //  USAGE-> Getting TOURNAMENTS referenced to Tournament->id
 //  API-> /v1/tournament/{id}
+//  TODO USED
+
     public function show($id){
         $tournament = Tournament::query()
             ->select(['id', 'name', 'logo','description','total_prize','location','starting_date','first_team_prize','second_team_prize','third_team_prize'])
@@ -23,8 +26,9 @@ class TournamentController extends Controller
         return response($tournament);
     }
 
-//  USAGE-> Getting all TEAMS reference to Tournament->id
+//  USAGE-> Getting all TEAMS reference to Tournament->id #With Players
 //  API-> /v1/tournament-teams/{id}
+//  TODO USED
     public function team($id){
     $tournaments = Tournament::query()
         ->select(['id'])
@@ -32,6 +36,16 @@ class TournamentController extends Controller
         ->orderBy('starting_date' , 'desc')
         ->findOrFail($id);
     Return response($tournaments) ;
+    }
+//  USAGE-> Getting all TEAMS reference to Tournament->id
+//  API-> /v1/tournament-teams/{id}
+    public function teams($id){
+        $tournaments = Tournament::query()
+            ->select(['id'])
+            ->with("teams")
+            ->orderBy('starting_date' , 'desc')
+            ->findOrFail($id);
+        Return response($tournaments) ;
     }
 
 //  USAGE-> Getting all MATCHES reference to Tournament->id
