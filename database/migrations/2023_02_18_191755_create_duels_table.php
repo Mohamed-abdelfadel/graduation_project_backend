@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('duels', function (Blueprint $table) {
             $table->id();
-            $table->string('team1_score') ;
-            $table->string('team2_score') ;
+            $table->integer('team1_score')->default(0) ;
+            $table->integer('team2_score')->default(0) ;
             $table->timestamp('starting_date') ;
             $table->timestamps();
+            $table->softDeletes() ;
+
         });
     }
 

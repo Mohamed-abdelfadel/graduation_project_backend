@@ -36,7 +36,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 3,
             "team2_id" => 4,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-07 0:03:44",
+            "starting_date" => "2021-04-07 0:03:44",
             "status_id" => 2
 
         ]) ;

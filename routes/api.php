@@ -33,10 +33,10 @@ route::group(['middleware' => ['auth:sanctum']] , function (){
 // USAGE-> PUBLIC routes >>
 
 //USAGE-> GAMER routes
-//Route::controller(GamerController::class)->group(function () {
-//    Route::post('/v1/login_data' ,'login') ;
-//    Route::post('/v1/signup_data','register') ;
-//});
+Route::controller(GamerController::class)->group(function () {
+    Route::post('/v1/login_data' ,'login') ;
+    Route::post('/v1/signup_data','register') ;
+});
 // USAGE-> GAME routes
 Route::controller(GameController::class)->group(function () {
     Route::get('/v1/games' ,'index') ;
@@ -77,8 +77,11 @@ Route::controller(PlayerController::class)->group(function () {
 
 // USAGE-> DUELS(MATCHES) routes
 Route::controller(DuelController::class)->group(function () {
+    Route::post('/v1/match','store');
     Route::get('/v1/matchess','index');
-//    Route::get('/v1/tournament-matches/{id}' ,'tournament');
+    Route::get('/v1/match/{id}','show');
+    Route::get('/v1/match-trash','trash');
+    Route::delete('/v1/match/{id}','destroy');
 });
 Route::get('/playground', function (){
     event(PlaygroundEvent::broadcast());
