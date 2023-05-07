@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Duel extends Model
 {
     use HasFactory;
+    use SoftDeletes;
     public function playoff(){
         return $this->belongsTo(Playoff::class) ;
     }
@@ -25,5 +27,8 @@ class Duel extends Model
     }
     public function game(){
         return $this->belongsTo(Game::class) ;
+    }
+    public function status(){
+        return $this->belongsTo(Status::class) ;
     }
 }
