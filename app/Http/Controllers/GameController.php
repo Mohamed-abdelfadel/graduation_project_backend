@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
+use App\Models\Game_news;
 
 class GameController extends Controller
 {
@@ -26,10 +27,10 @@ class GameController extends Controller
         return $data ;
     }
 
-    public function news($id)
+    public function news()
     {
-        $game = Game::query()->with('news')->findOrFail($id);
-        return response($game) ;
+        $news = Game_news::query()->get();
+        return response($news) ;
     }
 
     public function matches(){
