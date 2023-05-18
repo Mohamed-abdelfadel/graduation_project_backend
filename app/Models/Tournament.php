@@ -30,7 +30,7 @@ class Tournament extends Model
     public function game(){
         return $this->belongsTo(Game::class) ;
     }
-    public function news(){
+    public function tournament_news(){
         return $this->hasMany(Tournament_news::class) ;
     }
 }

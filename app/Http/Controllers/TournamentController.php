@@ -62,8 +62,7 @@ class TournamentController extends Controller
 //  API-> /v1/tournament-news/{id}
     public function news(){
         $news = Tournament::query()
-            ->select(['id', 'name', 'logo'])
-            ->with("news")
+            ->with("tournament_news")
             ->get();
         return response($news) ;
     }

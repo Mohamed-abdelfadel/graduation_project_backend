@@ -6,6 +6,7 @@ use App\Models\Game;
 use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
 use App\Models\Game_news;
+use App\Models\news;
 
 class GameController extends Controller
 {
@@ -19,18 +20,8 @@ class GameController extends Controller
 
     public function tournaments($id)
     {
-        $game = Game::query()->with('tournament')->findOrFail($id);
-        $data = array();
-        foreach ($game->tournament as $tournament){
-            $data[]=["id"=> $tournament->id ,"name"=> $tournament->name ,"logo"=> $tournament->logo];
-        }
-        return $data ;
-    }
-
-    public function news()
-    {
-        $news = Game_news::query()->get();
-        return response($news) ;
+        $game = Game::query()->with('tournaments_only')->findOrFail($id);
+        return response($game);
     }
 
     public function matches(){
@@ -40,6 +31,46 @@ class GameController extends Controller
             ->get();
         return response($matches) ;
     }
+
+
+    public function matchess(){
+        $games = Game::query()
+            ->select("id" , "name")
+            ->with("tournament")
+            ->get();
+        $matches_data = $games->map(function ($game) {
+            return [
+                "id" => $game->id,
+                "name" => $game->name,
+                "tournaments" => [
+                    "id" => $game->tournament->id,
+                    "name" => $game->tournament->name,
+                    "logo" => $game->tournament->logo,
+                    "team1" => [
+                        "id" => $game->team1->id,
+                        "name" => $game->team1->name,
+                        "logo" => $game->team1->logo,
+                        "score" => $game->team1_score,
+                ],
+                ],
+
+                "team1" => [
+                    "id" => $game->team1->id,
+                    "name" => $game->team1->name,
+                    "logo" => $game->team1->logo,
+                    "score" => $game->team1_score,
+                ],
+                "team2" => [
+                    "id" => $game->team2->id,
+                    "name" => $game->team2->name,
+                    "logo" => $game->team2->logo,
+                    "score" => $game->team2_score,
+                ],
+                "live_status" => $game->status->name,
+                "starting_date" => $game->starting_date,
+            ];
+        });
+        return response($matches_data) ;    }
     /**
      * Store a newly created resource in storage.
      *
@@ -60,7 +91,7 @@ class GameController extends Controller
     public function show($id)
     {
         $matches = Game::query()->with("tournaments:id,game_id,name,logo")->select("id" , "name")->findOrFail($id);
-        return response($matches) ;;
+        return response($matches) ;
     }
 
     /**

@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Duel;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Carbon;
 
 class DuelSeeder extends Seeder
 {
@@ -24,7 +23,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 1,
             "team2_id" => 2,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-07 0:01:44",
+            "starting_date" => "2023-05-17 0:03:44",
             "status_id" => 1
 
         ]) ;
@@ -36,7 +35,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 3,
             "team2_id" => 4,
             "tournament_id" => 1,
-            "starting_date" => "2021-04-07 0:03:44",
+            "starting_date" => "2023-05-17 0:03:44",
             "status_id" => 2
 
         ]) ;
@@ -48,7 +47,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 5,
             "team2_id" => 1,
             "tournament_id" => 1,
-            "starting_date" => "2023-04-07 0:04:44",
+            "starting_date" => "2023-05-17 0:03:44",
             "status_id" => 3
 
         ]) ;

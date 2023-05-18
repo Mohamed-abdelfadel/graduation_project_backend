@@ -10,6 +10,7 @@ use App\Http\Controllers\TournamentController ;
 use App\Http\Controllers\PlayerController ;
 use App\Http\Controllers\TeamController ;
 use App\Http\Controllers\DuelController ;
+use App\Http\Controllers\TournamentNewsController;
 use App\Events\PlaygroundEvent ;
 /*
 |--------------------------------------------------------------------------
@@ -42,8 +43,6 @@ Route::controller(GameController::class)->group(function () {
     Route::get('/v1/games' ,'index') ;
     Route::get('/v1/game-tournaments/{id}' ,'tournaments') ;
     Route::get('/v1/game/{id}' ,'show') ;
-    Route::get('/v1/game-news/{id}' ,'newss') ;
-    Route::get('/v1/game-news' ,'news') ;
     Route::get('/v1/matches' ,'matches') ;
     Route::get('/v1/matches/{id}' ,'show') ;
 });
@@ -66,9 +65,12 @@ Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournament-overview/{id}' ,'teams') ;
     Route::get('/v1/tournament/{id}' ,'show') ;
     Route::get('/v1/tournament-matches/{id}' ,'duels') ;
-    Route::get('/v1/tournament-news' ,'news') ;
+    Route::get('/v1/tournament-news/{id}' ,'news') ;
 });
-
+Route::controller(TournamentNewsController::class)->group(function () {
+    Route::get('/v1/tournaments_news' ,'index') ;
+    Route::get('/v1/tournament_news/{id}' ,'tournament_news') ;
+});
 
 // USAGE-> PLAYER routes
 Route::controller(PlayerController::class)->group(function () {
@@ -79,6 +81,8 @@ Route::controller(PlayerController::class)->group(function () {
 Route::controller(DuelController::class)->group(function () {
     Route::post('/v1/match','store');
     Route::get('/v1/matchess','index');
+    Route::get('/v1/matchess/{id}','show');
+
     Route::get('/v1/match/{id}','show');
     Route::get('/v1/match-trash','trash');
     Route::delete('/v1/match/{id}','destroy');

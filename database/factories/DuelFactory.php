@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\CarbonInterval;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
 use Faker\Factory as Faker;
@@ -19,14 +20,14 @@ class DuelFactory extends Factory
      */
     public function definition()
     {
-        // Generate a Faker instance
+// Generate a Faker instance
         $faker = Faker::create();
 
-// Generate a random timestamp between yesterday and tomorrow
-        $timestamp = Carbon::yesterday()->timestamp + rand(0, Carbon::tomorrow()->timestamp - Carbon::yesterday()->timestamp);
+// Generate a random number of seconds between yesterday and tomorrow
+        $seconds = rand(0, CarbonInterval::day()->seconds * 2);
 
-// Create a new Carbon instance from the generated timestamp
-        $fakeDate = Carbon::createFromTimestamp($timestamp);
+// Create a new Carbon instance from yesterday and add the random number of seconds
+        $fakeDate = Carbon::yesterday()->addSeconds($seconds);
 
 // Use the Faker instance to format the Carbon instance as a fake date
         $fakeDateString = $faker->dateTimeBetween($fakeDate, Carbon::tomorrow())->format('Y-m-d H:i:s');

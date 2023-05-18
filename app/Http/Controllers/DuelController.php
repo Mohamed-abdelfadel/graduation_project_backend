@@ -27,35 +27,82 @@ class DuelController extends Controller
 
         $matches_data = $matches->map(function ($match) {
             return [
-                "id" => $match->id,
-                "playoff" => $match->playoff->name,
-                "game" => [
                     "id" => $match->game->id,
                     "name" => $match->game->name,
-                ],
-                "tournament" => [
-                    "id" => $match->tournament->id,
-                    "name" => $match->tournament->name,
-                    "logo" => $match->tournament->logo,
-                ],
-                "team1" => [
-                    "id" => $match->team1->id,
-                    "name" => $match->team1->name,
-                    "logo" => $match->team1->logo,
-                    "score" => $match->team1_score,
-                ],
-                "team2" => [
-                    "id" => $match->team2->id,
-                    "name" => $match->team2->name,
-                    "logo" => $match->team2->logo,
-                    "score" => $match->team2_score,
-                ],
-                "live_status" => $match->status->name,
-                "starting_date" => $match->starting_date,
+                    "tournament" => [
+                        "id" => $match->tournament->id,
+                        "name" => $match->tournament->name,
+                        "logo" => $match->tournament->logo,
+                        "live_status" => $match->status->name,
+                        "matches" => [
+                            "id" => $match->id,
+                            "starting_date" => $match->starting_date,
+                            "team1" => [
+                                "id" => $match->team1->id,
+                                "name" => $match->team1->name,
+                                "logo" => $match->team1->logo,
+                                "score" => $match->team1_score,
+                            ],
+                            "team2" => [
+                                "id" => $match->team2->id,
+                                "name" => $match->team2->name,
+                                "logo" => $match->team2->logo,
+                                "score" => $match->team2_score,
+                            ],
+                            "playoff" =>[
+                                "id" => $match->playoff->id,
+                                "name" => $match->playoff->name
+                            ]
+                        ]
+                    ],
             ];
         });
             return response($matches_data) ;
     }
+        public function show($id){
+            $match = Duel::query()
+                ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date")
+                ->with("game:id,name")
+                ->with("tournament:id,name,logo")
+                ->with("team1:id,name,logo")
+                ->with("team2:id,name,logo")
+                ->with("playoff:id,name")
+                ->with("status:id,name")
+                ->orderBy('starting_date' , 'desc')
+                ->findOrFail($id);
+
+            return [
+                "id" => $match->game->id,
+                "name" => $match->game->name,
+                "tournament" => [
+                    "id" => $match->tournament->id,
+                    "name" => $match->tournament->name,
+                    "logo" => $match->tournament->logo,
+                    "live_status" => $match->status->name,
+                    "matches" => [
+                        "id" => $match->id,
+                        "starting_date" => $match->starting_date,
+                        "team1" => [
+                            "id" => $match->team1->id,
+                            "name" => $match->team1->name,
+                            "logo" => $match->team1->logo,
+                            "score" => $match->team1_score,
+                        ],
+                        "team2" => [
+                            "id" => $match->team2->id,
+                            "name" => $match->team2->name,
+                            "logo" => $match->team2->logo,
+                            "score" => $match->team2_score,
+                        ],
+                        "playoff" =>[
+                            "id" => $match->playoff->id,
+                            "name" => $match->playoff->name
+                        ]
+                    ]
+                ],
+            ];
+        }
+
 
         public function store(Request $request){
             $match = new Duel()  ;
@@ -68,50 +115,6 @@ class DuelController extends Controller
             $match->status_id = request('status_id') ;
             $match->save();
             return "Match added successfully" ;
-
-    }
-
-
-    public function show($id)
-    {
-        $match = Duel::query()
-            ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date")
-            ->with("game:id,name")
-            ->with("tournament:id,name,logo")
-            ->with("team1:id,name,logo")
-            ->with("team2:id,name,logo")
-            ->with("playoff:id,name")
-            ->with("status:id,name")
-            ->orderBy('starting_date' , 'desc')
-            ->findOrFail($id);
-        $matches_data =  [
-                "id" => $match->id,
-                "playoff" => $match->playoff->name,
-                "game" => [
-                    "id" => $match->game->id,
-                    "name" => $match->game->name,
-                ],
-                "tournament" => [
-                    "id" => $match->tournament->id,
-                    "name" => $match->tournament->name,
-                    "logo" => $match->tournament->logo,
-                ],
-                "team1" => [
-                    "id" => $match->team1->id,
-                    "name" => $match->team1->name,
-                    "logo" => $match->team1->logo,
-                    "score" => $match->team1_score,
-                ],
-                "team2" => [
-                    "id" => $match->team2->id,
-                    "name" => $match->team2->name,
-                    "logo" => $match->team2->logo,
-                    "score" => $match->team2_score,
-                ],
-                "live_status" => $match->status->name,
-                "starting_date" => $match->starting_date,
-            ];
-        return response($matches_data);
 
     }
 

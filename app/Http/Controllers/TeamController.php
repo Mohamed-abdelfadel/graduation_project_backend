@@ -15,13 +15,8 @@ class TeamController extends Controller
 
     public function players($id)
     {
-        $team = Team::query()->with('player')->find($id) ;
-        $data = array();
-        foreach ($team->player as $player){
-            $data[]=["id"=> $player->id ,"name"=> $player->name ,"logo"=> $player->image];
-        }
-
-        return $data ;
+        $team = Team::query()->with('players')->find($id) ;
+        return response($team);
     }
     /**
      * Store a newly created resource in storage.
