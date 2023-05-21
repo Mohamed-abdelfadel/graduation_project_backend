@@ -13,7 +13,7 @@ class NewsController extends Controller
         return response()->json($news) ;
     }
 
-    /**
+    /*
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
