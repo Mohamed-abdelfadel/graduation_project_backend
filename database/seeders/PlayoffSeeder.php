@@ -15,6 +15,7 @@ class PlayoffSeeder extends Seeder
      */
     public function run()
     {
+
         Playoff::create([
             "name"=> "Quarterfinals"
         ]) ;
@@ -24,6 +25,5 @@ class PlayoffSeeder extends Seeder
         Playoff::create([
             "name"=> "Finals"
         ]) ;
-
     }
 }

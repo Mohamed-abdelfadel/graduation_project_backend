@@ -20,7 +20,7 @@ class PlayerFactory extends Factory
             'name' => fake()->firstNameMale,
             'description' => fake()->text,
             'game_id' => rand(1 , 3),
-            'team_id' => rand(1 , 30)
+            'team_id' => rand(1 , 7)
         ];
     }
 }

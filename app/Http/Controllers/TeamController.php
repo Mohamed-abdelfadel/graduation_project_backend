@@ -28,7 +28,10 @@ class TeamController extends Controller
     {
         //
     }
-
+    public function top_teams($id){
+        $top_team = Team::query()->select("id","logo","name")->where("tournament_id" , "=","$id")->limit(3)->get() ;
+        return response($top_team);
+    }
     /**
      * Display the specified resource.
      *

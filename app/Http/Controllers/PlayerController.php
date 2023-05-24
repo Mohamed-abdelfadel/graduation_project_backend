@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
-
     public function index()
     {
         return Player::query()->get() ;
 
     }
-
-    /**
+    public function top_players($id){
+        $top_player = Player::query()
+            ->select('id', 'name',"team_id")
+            ->with(['team' => function ($query) use ($id) {
+                $query->where('tournament_id', $id);
+            }])->limit(3)->get();
+        return response($top_player);
+    }    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

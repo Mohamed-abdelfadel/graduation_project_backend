@@ -56,6 +56,8 @@ Route::controller(GameNewsController::class)->group(function () {
 Route::controller(TeamController::class)->group(function () {
         Route::get('/v1/teams','index') ;
         Route::get('/v1/team-players/{id}' ,'players') ;
+        Route::get('/v1/top-teams/{id}' ,'top_teams') ;
+
 });
 
 // USAGE-> TOURNAMENT routes
@@ -75,6 +77,8 @@ Route::controller(TournamentNewsController::class)->group(function () {
 // USAGE-> PLAYER routes
 Route::controller(PlayerController::class)->group(function () {
     Route::get('/v1/players' ,'index');
+    Route::get('/v1/top-players/{id}' ,'top_players') ;
+
 });
 
 // USAGE-> DUELS(MATCHES) routes
