@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Team;
 use App\Models\Tournament;
 
 class TournamentController extends Controller
@@ -33,7 +34,6 @@ class TournamentController extends Controller
     $tournaments = Tournament::query()
         ->select(['id'])
         ->with("teams_with_players:id,tournament_id,logo,name")
-        ->orderBy('starting_date' , 'desc')
         ->findOrFail($id);
     Return response($tournaments) ;
     }
@@ -53,7 +53,7 @@ class TournamentController extends Controller
     public function duels($id){
         $tournaments = Tournament::query()
             ->select(['id'])
-            ->with('duels:id,tournament_id,team1_id,team2_id,playoff_id')
+            ->with('duels:id,tournament_id,team1_id,team2_id,team1_score,team2_score,playoff_id')
             ->findOrFail($id);
         return response($tournaments) ;
     }
@@ -66,6 +66,7 @@ class TournamentController extends Controller
             ->get();
         return response($news) ;
     }
+
 
 //  TODO-> Start working on ADMIN pages (Store , Update , Delete):
 }

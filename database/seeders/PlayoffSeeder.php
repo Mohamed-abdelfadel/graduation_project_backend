@@ -15,15 +15,27 @@ class PlayoffSeeder extends Seeder
      */
     public function run()
     {
-        Playoff::create([
-            "name"=> "Quarterfinals"
-        ]) ;
-        Playoff::create([
-            "name"=> "Semifinals"
-        ]) ;
-        Playoff::create([
-            "name"=> "Finals"
-        ]) ;
 
+        Playoff::create([
+            "name"=> "Upper Quarterfinals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Lower Quarterfinals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Upper Semifinals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Lower Semifinals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Upper Finals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Lower Finals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Grand Finals"
+        ]) ;
     }
 }

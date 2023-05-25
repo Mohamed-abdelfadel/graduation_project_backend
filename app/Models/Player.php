@@ -10,7 +10,7 @@ class Player extends Model
     use HasFactory;
 
     public function team(){
-        return $this->belongsTo(Team::class) ;
+        return $this->belongsTo(Team::class)->select("id","tournament_id") ;
     }
 }
 

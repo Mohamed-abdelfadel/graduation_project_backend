@@ -13,16 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('duels', function (Blueprint $table) {
+        Schema::create('tournament_team', function (Blueprint $table) {
             $table->id();
-            $table->integer('team1_score')->nullable() ;
-            $table->integer('team2_score')->nullable() ;
-            $table->string("platform")->nullable();
-            $table->string("video_link")->nullable();
-            $table->timestamp('starting_date') ;
+            $table->unsignedBigInteger('tournament_id');
+            $table->unsignedBigInteger('team_id');
             $table->timestamps();
-            $table->softDeletes() ;
 
+            $table->foreign('tournament_id')->references('id')->on('tournaments')->onDelete('cascade');
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
         });
     }
 
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('duels');
+        Schema::dropIfExists('tournament_team');
     }
 };

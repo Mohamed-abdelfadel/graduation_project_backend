@@ -61,7 +61,7 @@ class DuelController extends Controller
     }
         public function show($id){
             $match = Duel::query()
-                ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date")
+                ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date","platform","video_link")
                 ->with("game:id,name")
                 ->with("tournament:id,name,logo")
                 ->with("team1:id,name,logo")

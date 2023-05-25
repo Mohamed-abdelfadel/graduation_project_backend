@@ -14,7 +14,7 @@ class Tournament extends Model
         return $this->hasMany(Team::class)->with("players:id,name,team_id,image") ;
     }
     public function teams(){
-        return $this->hasMany(Team::class);
+        return $this->hasMany(Team::class)->orderBy("wins" , 'desc');
     }
     public function duels(){
         $yesterday = Carbon::yesterday()->format('Y-m-d');
@@ -22,7 +22,8 @@ class Tournament extends Model
         return $this->hasMany(Duel::class)
             ->with("team1:id,name,logo")
             ->with("team2:id,name,logo")
-            ->with("playoff:id,name");
+            ->with("playoff:id,name")
+            ->with("status:id,name");
 //            ->whereBetween('starting_date',[$yesterday, $tomorrow]);
         //            ->with("tournament:id,name,logo")
     }
@@ -33,4 +34,6 @@ class Tournament extends Model
     public function tournament_news(){
         return $this->hasMany(Tournament_news::class) ;
     }
+
+
 }
