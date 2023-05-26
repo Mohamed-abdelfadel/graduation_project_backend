@@ -45,6 +45,7 @@ class DuelSeeder extends Seeder
             "starting_date" => "{$first_date} 0:04:44",
             "status_id" => 1
         ]) ;
+
         Duel::create([
             "playoff_id" => 1,
             "platform"=>"youtube",
