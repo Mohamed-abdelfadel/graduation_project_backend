@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Duel;
 use App\Models\Game;
 use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
 use App\Models\Game_news;
 use App\Models\news;
+use Carbon\Carbon;
 
 class GameController extends Controller
 {
@@ -29,6 +31,9 @@ class GameController extends Controller
             ->select("id" , "name")
             ->with("tournaments:id,game_id,name,logo")
             ->get();
+
+
+
         return response($matches) ;
     }
 

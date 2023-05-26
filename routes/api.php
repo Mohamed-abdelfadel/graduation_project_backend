@@ -30,6 +30,7 @@ use App\Events\PlaygroundEvent ;
 // USAGE-> SECURED routes
 route::group(['middleware' => ['auth:sanctum']] , function (){
     route::post('/v1/logout' , [GamerController::class , 'logout']) ;
+    Route::get('/v1/profile',[GamerController::class , 'profile']) ;
 });
 // USAGE-> PUBLIC routes >>
 
@@ -57,7 +58,10 @@ Route::controller(TeamController::class)->group(function () {
         Route::get('/v1/teams','index') ;
         Route::get('/v1/team-players/{id}' ,'players') ;
         Route::get('/v1/top-teams/{id}' ,'top_teams') ;
-        Route::get('/v1/update_result/{id}' ,'result') ;
+        Route::get('/v1/result/{id}' ,'result') ;
+        Route::get('/v1/result/' ,'result') ;
+        Route::get('/v1/update_result/{id}' ,'update_result') ;
+
 
 });
 
@@ -87,7 +91,7 @@ Route::controller(DuelController::class)->group(function () {
     Route::post('/v1/match','store');
     Route::get('/v1/matchess','index');
     Route::get('/v1/matchess/{id}','show');
-
+    Route::get('/v1/update_matches','Reset_Status');
     Route::get('/v1/match/{id}','show');
     Route::get('/v1/match-trash','trash');
     Route::delete('/v1/match/{id}','destroy');

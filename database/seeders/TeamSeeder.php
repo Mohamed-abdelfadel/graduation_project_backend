@@ -250,15 +250,65 @@ class TeamSeeder extends Seeder
             "description" => "PSG Talon (formerly Talon Esports) is a professional esports organization in partnership with Paris Saint-Germain eSports.",
             "history" => "In 2019, Talon Esports was announced as one of the 10 teams participating in the PCS. Their roster was announced in 2020, consisting of Hanabi, River, Candy, Unified and Kaiwing. They won their debut season, with a 3-2 victory against Machi Esports in the Spring finals. Unfortunately, MSI 2020 was cancelled, which meant no full international debut for the team. Despite this, they faced the Vietnamese teams at the Mid Season Showdown and won the title by beating Team Flash 3-1 in the finals. Ahead of the Summer Season, they partnered with Paris Saint-Germain eSports to rebrand to PSG Talon. In this split, they placed second following a 0-3 defeat against Machi Esports. At Worlds 2020, PSG Talon placed 9-12th following a 2/-/4 record in their group.",
         ]) ;
+
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://am-a.akamaihd.net/image?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1673830053328_Geekay_Esports-logo.png",
+            "name" => "Geekay Esports" ,
+            "description" => "Geekay Esports is an Emirati esports organization.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://am-a.akamaihd.net/image?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1676278903430_FullcolorTransparent1.png",
+            "name" => "RAAD" ,
+            "description" => "Team RA'AD is an Egyptian organization.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://am-a.akamaihd.net/image?resize=200:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1673826964651_DDD-LOGO-PNG.png",
+            "name" => "Triple Esports" ,
+            "description" => "Triple Esports is a Saudi Arabian esports organization.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://d3075koojqalel.cloudfront.net/team/logo/20230307105534_79953.png",
+            "name" => "3BL Esports" ,
+            "description" => "3BL Esports is an Egyptian organization.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://www.anubisgaming.com/content/uploads/2022/11/main-home-logo-2.png",
+            "name" => "Anubis Gaming" ,
+            "description" => "Anubis Gaming is an Egyptian esports organization.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://liquipedia.net/commons/images/thumb/1/10/Fox_Gaming_allmode.png/600px-Fox_Gaming_allmode.png",
+            "name" => "Fox Gaming" ,
+            "description" => "Fox Gaming is a Moroccan esports organization founded in May 2020.",
+            "history" => "",
+        ]) ;
 //        Team::create([
-//            "tournament_id" => 3,
+//            "tournament_id" => 4,
 //            "logo" => "",
 //            "name" => "" ,
 //            "description" => "",
 //            "history" => "",
 //        ]) ;
 //        Team::create([
-//            "tournament_id" => 3,
+//            "tournament_id" => 4,
+//            "logo" => "",
+//            "name" => "" ,
+//            "description" => "",
+//            "history" => "",
+//        ]) ;
+//        Team::create([
+//            "tournament_id" => 4,
 //            "logo" => "",
 //            "name" => "" ,
 //            "description" => "",
