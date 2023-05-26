@@ -162,7 +162,7 @@ class TeamSeeder extends Seeder
         ]) ;
         Team::create([
             "tournament_id" => 2,
-            "logo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/NRG_Esports_logo.svg/2560px-NRG_Esports_logo.svg.png",
+            "logo" => "https://static.wikia.nocookie.net/valorant_esports_gamepedia_en/images/f/fd/NRG_Esportslogo_square.png",
             "name" => "NRG" ,
             "description" => "NRG (previously known as NRG Esports) is an American esports organization, formed after co-owners of the NBA's Sacramento Kings purchased the LCS spot of Team Coast's League of Legends team. They currently have teams in Rocket League, Apex Legends, Fortnite, and manage the San Francisco Shock in the Overwatch League.",
             "history" => "",
@@ -288,7 +288,7 @@ class TeamSeeder extends Seeder
         ]) ;
         Team::create([
             "tournament_id" => 4,
-            "logo" => "https://liquipedia.net/commons/images/thumb/1/10/Fox_Gaming_allmode.png/600px-Fox_Gaming_allmode.png",
+            "logo" => "https://fxgesports.com/img/sponsors/fxg.png",
             "name" => "Fox Gaming" ,
             "description" => "Fox Gaming is a Moroccan esports organization founded in May 2020.",
             "history" => "",

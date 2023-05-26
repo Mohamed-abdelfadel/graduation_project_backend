@@ -103,7 +103,7 @@ class DuelController extends Controller
                 ],
             ];
         }
-    public function Reset_Status() {
+    public static function Reset_Status() {
         $now = Carbon::now('Europe/Istanbul')->format('Y-m-d H:00:00');
         $duels = Duel::query()->get();
 

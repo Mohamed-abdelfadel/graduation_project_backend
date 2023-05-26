@@ -18,7 +18,7 @@ class GameNewsSeeder extends Seeder
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt42d211245192af10/6391f39e3a0e946001a48bed/image_6483441_(1).JPG" ,
             "title" => "Save the Date for LEC Winter 2023 and Season Kickoff Tickets!" ,
-            "description" => "Here’s everything you need to know about securing your tickets for our Season Kickoff event and the LEC Winter Split.",
+                "description" => "Here’s everything you need to know about securing your tickets for our Season Kickoff event and the LEC Winter Split.",
             "author" => "League of Legends E-Sports ©",
             "game_id" => 2
         ]) ;
@@ -37,14 +37,21 @@ class GameNewsSeeder extends Seeder
             "game_id" => 2
         ]) ;
         Game_news::create([
-            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blte2c0dcec8472d272/636476dc2d2a144cc90497fb/GCC_Primer_Article_Header.jpg" ,
-            "title" => "VALORANT GAME CHANGERS CHAMPIONSHIP : EVERYTHING YOU NEED TO KNOW" ,
-            "description" => "Everything you need to know about the upcoming international capstone event for Game Changers 2022.",
+            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blte7ec112987ac0ba4/64464cf27ae5822b2414b91d/GC_Webheader_10.04_v3.jpg" ,
+            "title" => "VCT GAME CHANGERS EMEA STAGE 1 2023: DATES, FORMAT, TEAMS, AND HOW TO WATCH" ,
+            "description" => "I hope you’re ready because following 5 days of open qualifiers, Stage 1 of VCT Game Changers EMEA is set to kick off with a bang! With 5 of the 16 available places occupied by invited teams, the competition for the remaining 11 was fiercely fought by 128 sets of agents each eager to prove they deserved a spot, in what we already know is going to be an exciting year for the Game Changers circuit. Read on for all the details regarding dates, format, teams, and how to watch the games!
+VCT Game Changers EMEA 2023: Dates & Format
+Stage 1 will be starting on April 24th and will see the 16 teams split into 2 groups of 8. Group Stage matches will then take place on the following match days:
+Week 1 April 24th-26th
+Week 2 May 1st-2nd
+Week 3 May 8th-9th
+For the group phase of Stage 1, all matches will have clean feeds available for teams and influencers to host watch parties - please keep an eye on our socials for the full list of hosts! Group stage games start at 6 PM CEST, where 4 games will be played before the next set of 4 take place at 9 PM CEST.
+The Playoffs of Stage 1 will be broadcast live on our official channels, and we are proud to offer streams in English, Spanish, Turkish, French, Arabic, German, Polish, Czech, Slovakian, Finnish, Hungarian, Italian, and Ukrainian during these games.",
             "author" => "VALORANT E-Sports ©",
             "game_id" => 1
         ]) ;
         Game_news::create([
-            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blt281287d5ec56a983/6391af859ec8cb5e23a5c31f/VCT_EMEA_2023_Vision_&_Format.jpg" ,
+            "image" => "" ,
             "title" => "VCT EMEA 2023: VISION AND FORMAT" ,
             "description" => "Discover what VCT will look like for EMEA in 2023!",
             "author" => "VALORANT E-Sports ©",

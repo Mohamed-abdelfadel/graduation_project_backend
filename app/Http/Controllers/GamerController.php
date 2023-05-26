@@ -77,12 +77,13 @@ class GamerController extends Controller
             $user = Auth::user();
 
             $success['token'] =  $user->createToken('token')->plainTextToken;
-            $success['name'] =  $user->name;
             $response = [
                 "message" => "Welcome back $user->name",
                 "user" => $user,
                 "token" => $success['token']
             ];
+            $user->device_key = $request['fcm'] ;
+            $user->save();
             return response($response, 200);
         }
         else{

@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 class FirebaseController extends Controller
 {
-    public function sendWebNotification($data)
+    public static function sendWebNotification($data)
     {
         $url = 'https://fcm.googleapis.com/fcm/send';
         $serverKey = 'AAAARg-zJKY:APA91bGJEIcHE6Qg-i3U98Z6bUkIDzDwviUxw38aWtcgllo31eVZvpLbM9XOk6GE28MfMLx1HHyjkGf-UWbAtnJNIyBESnGT3efyljrFT-0SYwYrbV0b5SRO2BabzU4Oyhyt8gmWjGxc';

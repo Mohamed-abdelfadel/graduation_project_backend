@@ -10,6 +10,8 @@ use App\Http\Controllers\TournamentController ;
 use App\Http\Controllers\PlayerController ;
 use App\Http\Controllers\TeamController ;
 use App\Http\Controllers\DuelController ;
+use App\Http\Controllers\MailController ;
+
 use App\Http\Controllers\TournamentNewsController;
 use App\Events\PlaygroundEvent ;
 /*
@@ -26,15 +28,19 @@ use App\Events\PlaygroundEvent ;
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
-
+Route::post('/v1/email/verification-notification', [MailController::class, 'sendVerificationEmail'])->middleware('auth:sanctum');
+Route::get('/v1/verify-email/{id}/{hash}', [MailController::class, 'verify'])->name('verification.verify')->middleware('auth:sanctum');
 // USAGE-> SECURED routes
 route::group(['middleware' => ['auth:sanctum']] , function (){
-    route::post('/v1/logout' , [GamerController::class , 'logout']) ;
+    Route::post('/v1/logout' , [GamerController::class , 'logout']) ;
     Route::get('/v1/profile',[GamerController::class , 'profile']) ;
 });
 // USAGE-> PUBLIC routes >>
 
 //USAGE-> GAMER routes
+Auth::routes([
+    'verify' => true
+]);
 Route::controller(GamerController::class)->group(function () {
     Route::post('/v1/login_data' ,'login') ;
     Route::post('/v1/signup_data','register') ;
@@ -51,6 +57,9 @@ Route::controller(GameController::class)->group(function () {
 // USAGE-> GAME_NEWS routes
 Route::controller(GameNewsController::class)->group(function () {
     Route::get('/v1/news','index') ;
+    Route::get('/v1/news/{id}','show') ;
+        Route::post('/v1/news','store') ;
+
 });
 
 // USAGE-> TEAM routes

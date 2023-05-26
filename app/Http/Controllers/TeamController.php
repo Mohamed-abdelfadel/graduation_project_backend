@@ -85,7 +85,7 @@ class TeamController extends Controller
 
     }
 
-    public function result(Request $request, $id = null){
+    public static function result(Request $request, $id = null){
 
         if ($id ) {
             $match = Duel::query()->findOrFail($id);
