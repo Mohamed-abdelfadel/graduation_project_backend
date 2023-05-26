@@ -15,9 +15,7 @@ class PlayerController extends Controller
     public function top_players($id){
         $top_player = Player::query()
             ->select('id', 'name',"team_id")
-            ->with(['team' => function ($query) use ($id) {
-                $query->where('tournament_id', $id);
-            }])->limit(3)->get();
+            ->where("team_id","=","$id")->limit(3)->get();
         return response($top_player);
     }    /**
      * Show the form for creating a new resource.

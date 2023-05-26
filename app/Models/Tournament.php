@@ -14,7 +14,7 @@ class Tournament extends Model
         return $this->hasMany(Team::class)->with("players:id,name,team_id,image") ;
     }
     public function teams(){
-        return $this->hasMany(Team::class);
+        return $this->hasMany(Team::class)->orderBy("wins" , 'desc');
     }
     public function duels(){
         $yesterday = Carbon::yesterday()->format('Y-m-d');
