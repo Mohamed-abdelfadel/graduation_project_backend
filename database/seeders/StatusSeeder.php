@@ -19,7 +19,7 @@ class StatusSeeder extends Seeder
             "name"=> "Ended"
         ]) ;
         Status::create([
-            "name"=> "Ongoing"
+            "name"=> "Live"
         ]) ;
         Status::create([
             "name"=> "Upcoming"

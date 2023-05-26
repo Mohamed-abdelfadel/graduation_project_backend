@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Duel;
 use App\Models\team;
 use Illuminate\Http\Request;
 class TeamController extends Controller
@@ -76,4 +77,65 @@ class TeamController extends Controller
     {
         //
     }
+    public  function update_result(Request $request , $id){
+        $match = Duel::query()->findOrFail($id);
+        $match->team1_score = $request->input('team1_score');
+        $match->team2_score = $request->input('team2_score');
+        $match->save();
+
+    }
+
+    public static function result(Request $request, $id = null){
+
+        if ($id ) {
+            $match = Duel::query()->findOrFail($id);
+            if (!($match->status_id == 1)){
+                $match->status_id = 1;
+                $match->team1_score = $request->input('team1_score');
+                $match->team2_score = $request->input('team2_score');
+                $match->save();
+                if ($match->team1_score > $match->team2_score) {
+                    $winning_team = $match->team1;
+                    $losing_team = $match->team2;
+                } else {
+                    $winning_team = $match->team2;
+                    $losing_team = $match->team1;
+                }
+                $winning_team->wins += 1;
+                $winning_team->matches_played += 1;
+                $winning_team->save();
+
+                $losing_team->loses += 1;
+                $losing_team->matches_played += 1;
+                $losing_team->save();
+
+                return response("Match result terminated successfully");
+            }
+            else{
+                return response("this match isn't live");
+            }
+        }
+        else {
+            // Update all matches with status_id = 1
+            $matches = Duel::where('status_id', 1)->get();
+            foreach ($matches as $match) {
+                if ($match->team1_score > $match->team2_score) {
+                    $winning_team = $match->team1;
+                    $losing_team = $match->team2;
+                } else {
+                    $winning_team = $match->team2;
+                    $losing_team = $match->team1;
+                }
+                $winning_team->wins += 1;
+                $winning_team->matches_played += 1;
+                $winning_team->save();
+
+                $losing_team->loses += 1;
+                $losing_team->matches_played += 1;
+                $losing_team->save();
+            }
+            return response("Match results terminated successfully for all matches with status_id = 1");
+        }
+    }
+
 }

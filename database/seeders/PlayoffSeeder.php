@@ -17,13 +17,26 @@ class PlayoffSeeder extends Seeder
     {
 
         Playoff::create([
-            "name"=> "Quarterfinals"
+            "name"=> "Upper Quarterfinals"
         ]) ;
         Playoff::create([
-            "name"=> "Semifinals"
+            "name"=> "Lower Quarterfinals"
         ]) ;
         Playoff::create([
-            "name"=> "Finals"
+            "name"=> "Upper Semifinals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Lower Semifinals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Upper Finals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Lower Finals"
+        ]) ;
+        Playoff::create([
+            "name"=> "Grand Finals"
         ]) ;
     }
 }
+//hello

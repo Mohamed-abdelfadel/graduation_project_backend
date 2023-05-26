@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreGameRequest;
 use App\Models\Duel;
 use Illuminate\Http\Request;
-
+use Carbon\Carbon;
 class DuelController extends Controller
 {
 
@@ -15,7 +15,7 @@ class DuelController extends Controller
     public function index()
     {
         $matches = Duel::query()
-            ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date")
+            ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date","platform","video_link")
             ->with("game:id,name")
             ->with("tournament:id,name,logo")
             ->with("team1:id,name,logo")
@@ -61,7 +61,7 @@ class DuelController extends Controller
     }
         public function show($id){
             $match = Duel::query()
-                ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" , "status_id" , "starting_date")
+                ->select("id", "game_id" ,"tournament_id","team1_id", "team2_id" , "playoff_id" , "team1_score" , "team2_score" , "team2_score" ,"platform","video_link", "status_id" , "starting_date")
                 ->with("game:id,name")
                 ->with("tournament:id,name,logo")
                 ->with("team1:id,name,logo")
@@ -70,7 +70,6 @@ class DuelController extends Controller
                 ->with("status:id,name")
                 ->orderBy('starting_date' , 'desc')
                 ->findOrFail($id);
-
             return [
                 "id" => $match->game->id,
                 "name" => $match->game->name,
@@ -81,6 +80,8 @@ class DuelController extends Controller
                     "live_status" => $match->status->name,
                     "matches" => [
                         "id" => $match->id,
+                        "platform"=>$match->platform,
+                        "video_link"=>$match->video_link,
                         "starting_date" => $match->starting_date,
                         "team1" => [
                             "id" => $match->team1->id,
@@ -102,7 +103,24 @@ class DuelController extends Controller
                 ],
             ];
         }
+    public static function Reset_Status() {
+        $now = Carbon::now('Europe/Istanbul')->format('Y-m-d H:00:00');
+        $duels = Duel::query()->get();
 
+        foreach ($duels as $duel) {
+            $startingDate = Carbon::parse($duel->starting_date, 'Europe/Istanbul')->format('Y-m-d H:00:00');
+            if ($startingDate > $now) {
+                $duel->team1_score = null;
+                $duel->team2_score = null;
+                $duel->status_id = 3;
+            } elseif ($startingDate < $now) {
+                $duel->status_id = 1;
+            } else {
+                $duel->status_id = 2;
+            }
+            $duel->save();
+        }
+    }
 
         public function store(Request $request){
             $match = new Duel()  ;

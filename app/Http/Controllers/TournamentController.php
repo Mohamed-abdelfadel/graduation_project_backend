@@ -34,7 +34,6 @@ class TournamentController extends Controller
     $tournaments = Tournament::query()
         ->select(['id'])
         ->with("teams_with_players:id,tournament_id,logo,name")
-        ->orderBy('starting_date' , 'desc')
         ->findOrFail($id);
     Return response($tournaments) ;
     }
