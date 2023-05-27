@@ -96,7 +96,7 @@ class GameController extends Controller
     public function show($id)
     {
         $matches = Game::query()->with("tournaments:id,game_id,name,logo")->select("id" , "name")->findOrFail($id);
-//        DuelController::Reset_Status();
+        DuelController::Reset_Status();
 //        TeamController::result();
         return response($matches) ;
     }

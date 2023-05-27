@@ -202,7 +202,7 @@ class PlayerSeeder extends Seeder
 
         ]) ;
         Player::create([
-            "image" => "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg" ,
+            "image" => "https://www.vlr.gg/img/icons/flags/16/fi.png" ,
             "name" => "Jamppi" ,
             "description" => "Elias 'Jamppi' Olkkonen (born July 22, 2001) is a Finnish player who currently plays for Team Liquid. He is a former Counter-Strike: Global Offensive player who was most known for his time at ENCE.",
             "game_id" => 1,
@@ -674,5 +674,151 @@ class PlayerSeeder extends Seeder
             "game_id" => 1,
             "team_id" => 35
         ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Murph" ,
+            "description" => "Muhammed 'Murph' Fathy is an Egyptian player who is currently playing as a Toplaner for 3BL Esports.",
+            "game_id" => 1,
+            "team_id" => 36
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "1DarKNess" ,
+            "description" => "Sherif '1DarKNess' Hesham is an Egyptian player who is currently playing as a substitute Toplaner for 3BL Esports.",
+            "game_id" => 1,
+            "team_id" => 36
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Dama" ,
+            "description" => "Hussein 'Dama' Osama is an Egyptian player who is currently playing as a substitute Botlaner for 3BL Esports.",
+            "game_id" => 1,
+            "team_id" => 36
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/2560px-Flag_of_Tunisia.svg.png" ,
+            "name" => "Dean" ,
+            "description" => "Haithem 'Dean' Attia is a Tunisian player who is currently playing as a Jungler for 3BL Esports.",
+            "game_id" => 1,
+            "team_id" => 36
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/2560px-Flag_of_Tunisia.svg.png" ,
+            "name" => "Juggernaut" ,
+            "description" => "Med 'Juggernaut' Khadraoui is a Tunisian player who is currently playing as a Midlaner for 3BL Esports.",
+            "game_id" => 1,
+            "team_id" => 36
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Boda" ,
+            "description" => "Mohamed 'Boda' Yahia is an Egyptian player who is currently playing as a Toplaner for Anubis Gaming.",
+            "game_id" => 1,
+            "team_id" => 37
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Annie Bot" ,
+            "description" => "Marwan 'Annie Bot' Ashraf is an Egyptian player who is currently playing as a Midlaner for Anubis Gaming.",
+            "game_id" => 1,
+            "team_id" => 37
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Fev3r" ,
+            "description" => "Khaled 'Fev3r' Noshokaty is an Egyptian player who is currently playing as a Support for Anubis Gaming.",
+            "game_id" => 1,
+            "team_id" => 37
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png" ,
+            "name" => "Black" ,
+            "description" => "Murat 'Black' Ayaz is a Turkish player who is currently playing as a Botlaner for Anubis Gaming.",
+            "game_id" => 1,
+            "team_id" => 37
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Morocco_%28large_stroke%29.svg/1200px-Flag_of_Morocco_%28large_stroke%29.svg.png" ,
+            "name" => "Nova" ,
+            "description" => "Mehdi 'Nova' Ghalimi is a Moroccan player who is currently playing as a Support for Fox Gaming.",
+            "game_id" => 1,
+            "team_id" => 38
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Morocco_%28large_stroke%29.svg/1200px-Flag_of_Morocco_%28large_stroke%29.svg.png" ,
+            "name" => "Akazan" ,
+            "description" => "Ali 'Akazan' Mkharbeche (born March 1, 2000) is a Moroccan player who is currently playing as a substitute Toplaner for Fox Gaming.",
+            "game_id" => 1,
+            "team_id" => 38
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/2560px-Flag_of_Tunisia.svg.png" ,
+            "name" => "Lokmays" ,
+            "description" => "Aymen 'Lokmays' Jadallah is a Tunisian player who is currently playing as a substitute Support for GnG Esports.",
+            "game_id" => 1,
+            "team_id" => 39
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/2560px-Flag_of_Tunisia.svg.png" ,
+            "name" => "Skream" ,
+            "description" => "Youssef 'Skream' Abdellatif is a Tunisian player who is currently playing as a substitute Botlaner for GnG Esports.",
+            "game_id" => 1,
+            "team_id" => 39
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/2560px-Flag_of_the_United_Arab_Emirates.svg.png" ,
+            "name" => "Rust" ,
+            "description" => "Khalifa 'Rust' Al-Dhaheri (born October 19, 1999) is an Emirati player who is currently playing as a Botlaner for Nigma Galaxy MENA.",
+            "game_id" => 1,
+            "team_id" => 39
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/2560px-Flag_of_Jordan.svg.png" ,
+            "name" => "KlownZ" ,
+            "description" => "Mohammad 'KlownZ' Khalailah (born October 19, 1999) is a Jordanian player who is currently playing as a Support for Nigma Galaxy MENA.",
+            "game_id" => 1,
+            "team_id" => 39
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png" ,
+            "name" => "Faith" ,
+            "description" => "İnanç 'Faith' Berber is a Turkish player who is currently playing as a Jungler for GnG Esports.",
+            "game_id" => 1,
+            "team_id" => 40
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/2560px-Flag_of_Tunisia.svg.png" ,
+            "name" => "Koussay" ,
+            "description" => "Koussay 'Koussay' Soltani (born May 3, 2005) is a Tunisian player who is currently playing as a Midlaner for GnG Esports.",
+            "game_id" => 1,
+            "team_id" => 40
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/2560px-Flag_of_Tunisia.svg.png" ,
+            "name" => "Xicor" ,
+            "description" => "Fares 'Xicor' Saidana is a Tunisian player who is currently playing as a Botlaner for GnG Esports.",
+            "game_id" => 1,
+            "team_id" => 40
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/2000px-Flag_of_Saudi_Arabia.svg.png" ,
+            "name" => "Mishal" ,
+            "description" => "Mishal 'Mishal' Albarrak is a Saudi Arabian player who is currently playing as a Support for GnG Esports.",
+            "game_id" => 1,
+            "team_id" => 40
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Denmark_fixed.svg/225px-Flag_of_Denmark_fixed.svg.png" ,
+            "name" => "Postkassen" ,
+            "description" => "Johannes 'Postkassen' Thuesen is a Danish player who is currently playing as a Support for GnG Esports.",
+            "game_id" => 1,
+            "team_id" => 40
+        ]) ;
+
     }
 }

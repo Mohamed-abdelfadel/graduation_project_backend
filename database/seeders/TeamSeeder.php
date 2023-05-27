@@ -293,29 +293,71 @@ class TeamSeeder extends Seeder
             "description" => "Fox Gaming is a Moroccan esports organization founded in May 2020.",
             "history" => "",
         ]) ;
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://nigmagalaxy.com/wp-content/uploads/2022/08/Logo_mark.svg",
+            "name" => "Nigma Galaxy" ,
+            "description" => "Nigma Galaxy is the MENA roster of Galaxy Racer Esports and Team Nigma, an Emirati esports organization. On September 20th, 2021 Galaxy Racer merged with Team Nigma to create Nigma Galaxy.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 4,
+            "logo" => "https://cdn.thespike.gg/Teams%252010%2FGnGEsports_1674476507157.png",
+            "name" => "GnG Esports" ,
+            "description" => "GnG Esports (also known as Gamers and Geeks) is a Tunisian esports organization.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 5,
+            "logo" => "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/ccis.sidearmsports.com/images/logos/site/site.png",
+            "name" => "Columbia College" ,
+            "description" => "Columbia College is a private college in Columbia, Missouri, USA, currently hosting a collegiate Rocket League team.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 5,
+            "logo" => "https://esports.northwood.edu/wp-content/uploads/2021/04/esports_logo.png",
+            "name" => "Northwood Blue" ,
+            "description" => "Northwood Blue, formerly known as Northwood University and often referred to as Northwood Blue, is one of the collegiate Rocket League teams of private university Northwood University, located in Midland, Michigan, USA.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 5,
+            "logo" => "https://static.wikia.nocookie.net/cod_esports_gamepedia_en/images/9/99/Fisher_Collegelogo_square.png",
+            "name" => "Fisher College" ,
+            "description" => "Fisher College is a private college in Boston, Massachusetts, USA, currently hosting a collegiate Rocket League team.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 5,
+            "logo" => "https://esports.northwood.edu/wp-content/uploads/2021/04/esports_logo.png",
+            "name" => "Northwood White" ,
+            "description" => "Northwood University White, often referred to as Northwood White, is one of the collegiate Rocket League teams of private university Northwood University, located in Midland, Michigan, USA.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 5,
+            "logo" => "https://stockton.edu/relations/brand-guide/images/s-symbol-correct-2.png",
+            "name" => "Stockton University" ,
+            "description" => "Stockton University, also known as Stockton, is a public university in Galloway Township, New Jersey, USA, currently hosting a collegiate Rocket League team.",
+            "history" => "",
+        ]) ;
+        Team::create([
+            "tournament_id" => 5,
+            "logo" => "https://cdn.escharts.com/uploads/public/60f/70c/736/60f70c73653ed557872816.png",
+            "name" => "Berlin Phoenix" ,
+            "description" => "Berlin Phoenix is one of the collegiate Rocket League teams of public research university Technical University of Berlin, located in Berlin,",
+            "history" => "",
+        ]) ;
 //        Team::create([
-//            "tournament_id" => 4,
+//            "tournament_id" => 5,
 //            "logo" => "",
 //            "name" => "" ,
 //            "description" => "",
 //            "history" => "",
 //        ]) ;
 //        Team::create([
-//            "tournament_id" => 4,
-//            "logo" => "",
-//            "name" => "" ,
-//            "description" => "",
-//            "history" => "",
-//        ]) ;
-//        Team::create([
-//            "tournament_id" => 4,
-//            "logo" => "",
-//            "name" => "" ,
-//            "description" => "",
-//            "history" => "",
-//        ]) ;
-//        Team::create([
-//            "tournament_id" => 3,
+//            "tournament_id" => 5,
 //            "logo" => "",
 //            "name" => "" ,
 //            "description" => "",

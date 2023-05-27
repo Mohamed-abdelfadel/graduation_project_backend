@@ -18,23 +18,42 @@ class GameNewsSeeder extends Seeder
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt42d211245192af10/6391f39e3a0e946001a48bed/image_6483441_(1).JPG" ,
             "title" => "Save the Date for LEC Winter 2023 and Season Kickoff Tickets!" ,
-                "description" => "Here’s everything you need to know about securing your tickets for our Season Kickoff event and the LEC Winter Split.",
+                "description" => "Update: Due to unforeseen circumstances, ticket release for the LEC Winter Split has been delayed until further notice. We’re working to get you your tickets as soon as possible, so please keep an eye on our Twitter and Instagram for further updates on when Winter Split tickets will become available. Tickets for the Season Kickoff event will still be available for purchase at 7:00PM CET on December 12 - we can’t wait to see you there!
+We want the LEC back, so we can spam in the chat – or cheer our lungs out at the LEC Studio in Berlin, where we’ll be welcoming fans back to watch the best LoL Esports EMEA has to offer.
+Our Summer Finals in Malmö was truly a show to remember, and we can’t wait to have you back cheering on the teams you love in Berlin. 2023 is going to be an incredible year for the newly renamed and revamped League of Legends EMEA Championship, and we want you there with us every step of the way. Whether you’ve just discovered the LEC, or have been with us since the beginning, we’re so excited to welcome you to the all-new Winter Split.
+Not only are we welcoming two new teams to our league, we’re debuting our all-new format, and we want you right there with us as we bring more hype moments, best-of-series, and nail biting elimination matches to the LEC stage.
+We’ll be welcoming fans back to the studio from Week 1 of Winter 2023, so you can join us for all the action as we welcome back teams both old and new to the stage. As well as our new challengers (say hello to KOI and Team Heretics!), we’ll be debuting our all-new format, which will push our teams to their competitive limits.
+But the Winter Split isn’t the only event in the EMEA Calendar for the beginning of 2023. We’ll also be running our first-ever Season Kickoff 2023 event – an all-new mini-tournament - to welcome in the 2023 season in style. Tickets for the LEC Season Kickoff 2023 will go on sale alongside tickets for the Winter Split, and we’ll be revealing more information about what you can expect from the event at the start of next year.
+Keep your eyes peeled on our socials, where we’ll be letting you know the second tickets for the Season Kickoff go live on December 12 at 7:00 PM CET. Winter Split tickets will go live at a later date, which we’ll reveal closer to the time. LEC Season Kickoff tickets will be priced at 25 EUR, with LEC Winter tickets costing 12 EUR (including transaction fees), and you’ll be able to purchase tickets for yourself and up to three friends via Eventbrite. Masks aren’t compulsory, but we highly encourage them while inside the studio.
+Tickets for each show day will need to be purchased separately, and places are limited, so you’ll need to act fast!
+If you’ve never visited us live before, now is the perfect time to experience an atmosphere like no other at the LEC Studio. Show up and show out in support of your favorite team, but whoever you support – we can’t wait to see you again!",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-01-22 13:04:18"
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blta25074e2ab5577d0/639b28aead296f11b79af3e3/LEC23_Article_Schedule_16x9.jpg" ,
             "title" => "The new broadcast days for the LEC and ERLs are here!" ,
-            "description" => "Here’s everything you need to know about the broadcast schedule for the EMEA League Esports 2023 Season - including our three confirmed broadcast days for the LEC.",
+            "description" => "As the 2023 Season approaches, we’ve got some exciting changes coming to our broadcast that we want to share with you all! We’re pleased to announce that we’ll be livestreaming LoL Esports in EMEA SEVEN days a week, with the LEC taking place on Saturdays, Sundays and Mondays during the regular season of all splits moving forward, with Fridays also being used during the Split Playoffs. For our Winter Split, we’ll be kicking things off on January 21, with all roads leading to the Winter Split Playoffs that will begin on February 20 and the Winter Split Playoff Final on February 26!
+Extending our LEC broadcast over three days means we can offer up to 15 games a week - bringing even more excitement and hype matchups to each of you. In addition, depending on what stage of the split is being played, we’ll be offering either five best-of-ones, two best-of-threes or a single best-of-five series each LEC day! It’s also worth highlighting that our biggest moments, our Split Finals and Season Final, will all be hosted on Sundays.
+Meanwhile, our ERLs will take place from Tuesday through to Friday during the season - with exact broadcast days for each specific ERL being revealed at a later date. By hosting our ERLs between Tuesdays and Fridays, it means fans in the region can enjoy EMEA LoL Esports action seven days a week and ensure they won’t be missing out on any of the action.
+Last month, we revealed our new format for the LEC and some additional key changes coming to the EMEA ecosystem next year, including the introduction of two new ERLs. These changes meant we needed to re-evaluate our broadcast schedule for 2023. So, we worked closely with the Global LoL Esports team to find a solution that provides you, our dedicated fans, with the best viewing experience possible, as often as possible, while not missing out on any of the key moments in our sport.
+Being able to bring live gameplay from across the EMEA region seven days a week is something that we’ve been working towards for a while now and by doing so, we truly believe we’ll be helping continue the growth of the LEC and all of our ERLs, making them more exciting and engaging for our fans both within EMEA but also worldwide.",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-02-23 13:04:18"
+
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt2591e1c7b30a02bb/6390e9c0a8ba0e5eb857e863/SeasonKickOff_Header_(1).png" ,
             "title" => "LoL Esports to Debut New Kickoff Event for 2023 Season" ,
-            "description" => "Nine regional leagues will celebrate start of the new competitive year for both League of Legends Ranked Play and LoL Esports during two-day event.",
+            "description" => "With the start of a new year comes a blank canvas, a fresh start for us all, from the World Champions to those climbing ranked. With this journey in mind, LoL Esports is excited to announce a brand new competitive event: Season Kickoff!
+For the first time, we will celebrate the start of the League of Legends ranked season and the LoL Esports season together. From January 10-11, 2023, the LCS, LEC, LCK, LPL, LJL, CBLOL, LLA, PCS, and VCS will host a special two-day broadcasted event previewing the 2023 season and highlighting players to watch, giving fans a first look at Season 2023 on the Rift, and a peek at what’s in store for LoL Esports. More information about the event format and schedule will be released soon.
+The Kickoff event will replace the League of Legends All-Star Event. While All-Stars has provided players and fans with countless special moments over the years, the current calendar can be challenging for many All-Star players. Replacing All-Stars with the Season Kickoff event will ultimately provide a much-deserved break for pro players and an exciting new platform for fans that will supplement the end-of-year local competitions and celebrations that regions typically hold during this period.",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-03-30 13:04:18"
+
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blte7ec112987ac0ba4/64464cf27ae5822b2414b91d/GC_Webheader_10.04_v3.jpg" ,
@@ -48,36 +67,8 @@ Week 3 May 8th-9th
 For the group phase of Stage 1, all matches will have clean feeds available for teams and influencers to host watch parties - please keep an eye on our socials for the full list of hosts! Group stage games start at 6 PM CEST, where 4 games will be played before the next set of 4 take place at 9 PM CEST.
 The Playoffs of Stage 1 will be broadcast live on our official channels, and we are proud to offer streams in English, Spanish, Turkish, French, Arabic, German, Polish, Czech, Slovakian, Finnish, Hungarian, Italian, and Ukrainian during these games.",
             "author" => "VALORANT E-Sports ©",
-            "game_id" => 1
-        ]) ;
-        Game_news::create([
-            "image" => "" ,
-            "title" => "VCT EMEA 2023: VISION AND FORMAT" ,
-            "description" => "Discover what VCT will look like for EMEA in 2023!",
-            "author" => "VALORANT E-Sports ©",
-            "game_id" => 1
-        ]) ;
-        Game_news::create([
-            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blt1b90318f7dba0ab6/637746597daea11117e06360/HEADER.jpg" ,
-            "title" => "VALORANT GAME CHANGERS EMEA 2023: VISION AND FORMAT CHANGES" ,
-            "description" => "The Game Changers Championship marks the conclusion of the 2022 circuit, and we’d like to congratulate G2 Gozen on being crowned champions after pulling off the reverse sweep against Shopify Rebellion! 2023 is fast approaching and we can’t wait to share further information with you today.",
-            "author" => "VALORANT E-Sports ©",
-            "game_id" => 1
-        ]) ;
-        Game_news::create([
-            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/bltcf6b03bb0948b6e3/6384e40471c75510a0ca448e/G-Loot_Clash_Recap_Header.jpg" ,
-            "title" => "G-LOOT RECAP: NEW-LOOK NAVI COME OUT ON TOP!" ,
-            "description" => "Read all of the information from the off-season G-Loot Clash",
-            "author" => "VALORANT E-Sports ©",
-            "game_id" => 1
-
-        ]) ;
-        Game_news::create([
-            "image" => "https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blt3957e8dc908270f5/63974c15c0d60d1e402eaecd/Red_Bull_Home_Ground_Recap.jpg" ,
-            "title" => "RED BULL HOME GROUND 2022 RECAP: 100 THIEVES REIGN SUPREME" ,
-            "description" => "Join us as we look back at this year’s OFF//SEASON Red Bull Home Ground Tournament",
-            "author" => "VALORANT E-Sports ©",
-            "game_id" => 1
+            "game_id" => 1,
+            "created_at" => "2023-04-02 13:04:18"
 
         ]) ;
         Game_news::create([
@@ -87,7 +78,9 @@ The Playoffs of Stage 1 will be broadcast live on our official channels, and we 
             Immediately after the conclusion of Masters, three Challengers Ascension tournaments will kick off, featuring the best teams from within the Pacific, EMEA, and Americas regions. More than twenty Challengers Leagues have been underway across the world in 2023, narrowing down hundreds of teams to the very best.
             This year more than twenty Challenger Leagues provided organized competitions that helped develop the next generation of VALORANT talent. A robust Challenger ecosystem is imperative to ensuring the most talented teams and pros in esports select VALORANT as the game where they dedicate their time and effort. Ascension represents the culmination of our first ever Challengers Season and we think this tournament series has the potential to become one of the most exciting events on our calendar. We’re excited to share these details with all of you and we’ll be listening closely to hear your thoughts on the tournament.",
             "author" => "VALORANT E-Sports ©",
-            "game_id" => 1
+            "game_id" => 1,
+            "created_at" => "2023-04-13 13:04:18"
+
 
         ]) ;
         Game_news::create([
@@ -106,11 +99,10 @@ YaLLa Esports (MENA)
 Acend (EMEA)
 Fnatic (EMEA)",
             "author" => "VALORANT E-Sports ©",
-            "game_id" => 1
+            "game_id" => 1,
+            "created_at" => "2023-04-15 13:04:18"
+
         ]) ;
-
-
-
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt8d44e3c9a55a91c4/645e098a30b83920f9fd4de8/LEC_Summer_Split_Season_Finals_dates_and_ticketing.jpg" ,
             "title" => "Full dates revealed for 2023 LEC Summer Split and 2023 LEC Season Finals - with tickets available soon!" ,
@@ -121,7 +113,9 @@ These six teams will battle it out at the LEC Studio for a chance for one of thr
 Tickets for the 2023 LEC Summer Split and 2023 LEC Season Finals matches taking place at the LEC Studio in Berlin, will go on sale on May 26 at 5pm CEST via emeatickets.lolesports.com. It’s important to note that we’re moving our ticketing services over to Vivenu, so tickets will no longer be available via Eventbrite. Tickets will be priced at €12, and will be available on a first-come, first-served basis, so you’ll need to act fast to secure yours!
 We look forward to welcoming you all back to the LEC Studio for the remainder of the season! To keep up to date with all things 2023 LEC Summer Split and 2023 LEC Season Finals, follow us on socials and keep your eyes on lolesports.com.",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-04-16 13:04:18"
+
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt627cf49ce34aea50/645a1934d898ecb55d33b986/MSI23_Costreaming-v1.1.jpg" ,
@@ -135,7 +129,9 @@ Yoda: https://www.twitch.tv/yoda (May 18-21)
 SangHo Lee & MinGyo Kim: https://bj.afreecatv.com/lshooooo (May 18-21)
 You can catch all things MSI 2023 on lolesports.com or by following LoL Esports on social media",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-04-20 13:04:18"
+
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/bltcdf589dfc9e4688c/643f15fedc0035582e72ca94/MSI23_Primer_1600x900.png" ,
@@ -170,7 +166,9 @@ Saturday, May 20 - 4 a.m. PST / 12 p.m. GMT
 Where will MSI take place?
 The tournament will take place in the Copper Box Arena in London, United Kingdom. London is more than 1,900 years old with 9 million people living within its borders, making it the largest metropolis in the UK. Copper Box Arena played host to the 2012 Summer Olympics as well as a multitude of esports tournaments throughout its 10-year history.",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-05-02 13:04:18"
+
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/bltad386dea2ebb9f2f/6446b207d0a4771107c6bcff/1600x900_KV_Header.jpg" ,
@@ -181,7 +179,8 @@ Red Bull Solo Q takes the familiar elements of competitive League and turns them
 This will be the fourth edition of Red Bull Solo Q since the tournament started in 2020, and Riot has been along for the ride since the beginning. The 2022 edition of Red Bull Solo Q took place alongside the League of Legends World Championship in New York, giving players a chance to see the Group Stage in person between their matches.
  Ahilleas 'SneakyLemon' Natsis took the top spot after a series of clutch wins, followed by utter domination in the semis and a 4-2 win record in the final with his performance helped secure him a spot on Greek Legends League team Zerolag Esports for the 2023 season.",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-05-14 13:04:18"
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt4bb15f2b9cbecaab/64426a16398bc14b3cffe182/2023_Finals_Save_the_Date.jpg" ,
@@ -194,7 +193,8 @@ Some eagle-eyed fans will have also spotted the 2023 LEC Season Finals is taking
 Finally, we’re delighted to reveal the return of the LEC XPO for the second year in a row. Following the success of the XPO at the 2022 LEC Summer Finals in Malmö last year, we want to continue to unleash fandom by giving our community the opportunity to closely interact with our partners and teams once more. Further information about the XPO will be revealed at a later date, so keep your eyes peeled for more details in the coming months.
 Make sure you follow the LEC’s social media channels and EMEA Masters on Twitter, Twitch, and Instagram to stay up-to-date with all the news from the EMEA LoL Esports ecosystem. With the LEC Summer Split and 2023 EM Summer around the corner, you won’t want to miss out on any of the action.",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-05-17 13:04:18"
         ]) ;
         Game_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/bltc8baf9282634b6b5/64404b79dc0035582e72ce8a/Gocheok_Sky_Dome_1_(1).jpg" ,
@@ -214,7 +214,8 @@ Gocheok Sky Dome in Seoul, the largest indoor venue in the country and the home 
 NOTE: The World Final has been scheduled later than usual to support the 19th Asian Games being held September 23-October 8 in Hangzhou, China! League of Legends and six other esports titles will be featured as medal events for the first time. The shift will accommodate our LoL Esports pro players competing in the Asian Games.
 Tickets will officially go on sale in three waves! Play-In Stage tickets will go on sale July 10, Swiss Stage tickets will go on sale July 19, and Knockout Stage tickets will go on sale August 2.",
             "author" => "League of Legends E-Sports ©",
-            "game_id" => 2
+            "game_id" => 2,
+            "created_at" => "2023-05-25 13:04:18"
         ]) ;
     }
 }
