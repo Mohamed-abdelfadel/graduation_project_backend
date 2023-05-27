@@ -67,6 +67,12 @@ class TournamentController extends Controller
         return response($news) ;
     }
 
+    public function search(){
+        $news = Tournament::query()
+            ->with("news")
+            ->get();
+        return response($news) ;
+    }
 
 //  TODO-> Start working on ADMIN pages (Store , Update , Delete):
 }
