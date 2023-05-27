@@ -89,7 +89,6 @@ With an absurd 12 total rounds of overtime, the matchup of FURIA vs. Sentinels o
 mwzera clutched a 1v3 to begin the map in favor of FURIA. TenZ won the 1v1 in the bonus round for Sentinels, who quickly tied the map up 2-2. After trading control of the map, the first half ended evenly 6-6.",
             "author" => "VALORANT Champions Americas League",
         ]) ;
-
         Tournament_news::create([
             "image" => "https://owcdn.net/img/646d8ded46ae4.jpg" ,
             "title" => "Double upsets start VCT Americas playoffs" ,
@@ -132,7 +131,6 @@ The Bracket Stage will be May 9-14 and May 16-20
 The Final will be May 21",
             "author" => "League of legends MSI 2023",
         ]) ;
-
         Tournament_news::create([
             "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt3882079e3f329415/63d39a3399f0c910e1719951/LEC_Winter_2023.jpg" ,
             "title" => "Here are the records to beat for the LEC Winter Split!" ,
