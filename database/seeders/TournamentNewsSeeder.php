@@ -142,34 +142,34 @@ We saw rookies rise (shoutout to G2 Esports’ Yike, who currently has the highe
 With the opening weekend of our LEC Winter Split now behind us, we wanted to take a look back into the misty depths of time at some of the LEC’s longest-standing records. It’ll take a whole lot of skill (and maybe just a little bit of luck), but there’s no better way for our teams to cement themselves as the region’s best by breaking one of our long-standing records.",
             "author" => "League of legends MSI 2023",
         ]) ;
-//        Tournament_news::create([
-//            "image" => "" ,
-//            "title" => "" ,
-//            "tournament_id" => 1,
-//            "description" => "",
-//            "author" => "",
-//        ]) ;
-//        Tournament_news::create([
-//            "image" => "" ,
-//            "title" => "" ,
-//            "tournament_id" => 1,
-//            "description" => "",
-//            "author" => "",
-//        ]) ;
-//        Tournament_news::create([
-//            "image" => "" ,
-//            "title" => "" ,
-//            "tournament_id" => 1,
-//            "description" => "",
-//            "author" => "",
-//        ]) ;
-//        Tournament_news::create([
-//            "image" => "" ,
-//            "title" => "" ,
-//            "tournament_id" => 1,
-//            "description" => "",
-//            "author" => "",
-//        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/FuOcmcFWYAI_aVm?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "Registration for the League of Legends Playground Championship is open for its first season this year in the Middle East and Africa region!",
+            "author" => "",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/FuaSysVWwAQs1cF?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "here are only three days left until registration for the League of Legends Playground Tournament closes!",
+            "author" => "",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/Fu0ekK_WwAI7z2Z?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "For the first time, watch the entire MSI tournament in Arabic with the streamer Dattura6 ! All you have to do is head over to his Twitch channel and catch up on all the exciting matches!",
+            "author" => "",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/Fs3xLa6WIAAFeML?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "The friendly match that brings together influencers and streamers in Turkey and the MENA region has now started!",
+            "author" => "",
+        ]) ;
 //        Tournament_news::create([
 //            "image" => "" ,
 //            "title" => "" ,

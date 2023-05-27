@@ -82,6 +82,7 @@ Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournament/{id}' ,'show') ;
     Route::get('/v1/tournament-matches/{id}' ,'duels') ;
     Route::get('/v1/tournament-news/{id}' ,'news') ;
+    Route::get('/v1/tournament-search' ,'search') ;
 });
 Route::controller(TournamentNewsController::class)->group(function () {
     Route::get('/v1/tournaments_news' ,'index') ;

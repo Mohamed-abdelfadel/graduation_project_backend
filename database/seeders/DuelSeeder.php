@@ -544,7 +544,7 @@ class DuelSeeder extends Seeder
             "status_id" =>1
         ]) ;
         Duel::create([
-            "playoff_id" =>3 ,
+            "playoff_id" =>4 ,
             "game_id" => 3 ,
             "team1_score" => 3,
             "team2_score" => 2,
