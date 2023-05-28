@@ -135,7 +135,7 @@ class GamerController extends Controller
         $user_id = Auth::user()->id;
         $user = User::query()->findOrFail($user_id);
         if (!Hash::check($current_password, $user->password)) {
-            return response()->json(['message' => 'This password does not match'], 400);
+            return response()->json(['message' => 'Current password is not correct'], 400);
         }
 
         $user->password = bcrypt($data['new_password']);
