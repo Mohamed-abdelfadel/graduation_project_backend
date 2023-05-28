@@ -98,9 +98,52 @@ class GamerController extends Controller
 
     public function profile(){
         $user_id = Auth::user()->id;
-        $profile = User::query()->select("name")->findOrFail($user_id);
+        $profile = User::query()->select("name","email","created_at","avatar_id")->findOrFail($user_id);
         return response($profile);
     }
+    public function update_avatar(Request $request){
+        if (Auth::user()->id){
+            $user_id = Auth::user()->id;
+            $user = User::query()->findOrFail($user_id);
+
+            if ($request['avatar_id'] >0 and  $request['avatar_id'] <=10){
+                $user->avatar_id = $request['avatar_id'];
+                $user->save();
+                return response(['avatar changed successfully'] , 200);
+            }
+            else{
+                return response(['avatar not found'] , 404);
+            }
+        }
+        else{
+            return response(['user Not found'],404);
+        }
+    }
+
+
+    public function update_password(Request $request)
+    {
+        $rules = [
+            'current_password' => ['required'],
+            'new_password' => ['required', Password::min(8)->letters()->mixedCase()->numbers()->uncompromised()]
+        ];
+
+        $data = $request->validate($rules);
+
+        $current_password = $data['current_password'];
+
+        $user_id = Auth::user()->id;
+        $user = User::query()->findOrFail($user_id);
+        if (!Hash::check($current_password, $user->password)) {
+            return response()->json(['message' => 'Current password is not correct'], 400);
+        }
+
+        $user->password = bcrypt($data['new_password']);
+        $user->save();
+
+        return response()->json(['message' => 'Password updated successfully']);
+    }
+
 
     public function update(UpdateGamerRequest $request, User $gamer){
     }

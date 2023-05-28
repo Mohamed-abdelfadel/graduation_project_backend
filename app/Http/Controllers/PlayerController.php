@@ -10,7 +10,6 @@ class PlayerController extends Controller
     public function index()
     {
         return Player::query()->get() ;
-
     }
     public function top_players($id){
         $top_player = Player::query()

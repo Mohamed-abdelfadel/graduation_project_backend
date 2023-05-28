@@ -48,7 +48,7 @@ class TournamentSeeder extends Seeder
 
 // League of Legends Tournaments
         Tournament::create([
-            "logo" => "https://upload.wikimedia.org/wikipedia/en/e/e7/LOL_MSI_logo.svg",
+            "logo" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blta41e02bc63afde9e/624259588eea01703cb70d31/MSI_Logo-black.png",
             "name" => "League of Legends World Championship",
             "game_id" => 2,
             "description" => "The League of Legends World Championship is the pinnacle of competitive League of Legends play, featuringthe best teams from around the world competing for a multi-million dollar prize pool.",
@@ -60,6 +60,7 @@ class TournamentSeeder extends Seeder
             "starting_date" => "2023-4-29 12:00:00",
             "status_id" => 2
         ]);
+
         Tournament::create([
             "logo" => "https://egamersworld.com/uploads/tournaments/arabian-league-20231674049594125-logo-1.png",
             "name" => "Arabian League" ,
@@ -71,22 +72,22 @@ class TournamentSeeder extends Seeder
             "second_team_prize" => 350000,
             "third_team_prize" => 150000,
             "starting_date" => "2023-05-19 1:00:00",
-            "status_id" => 1
+            "status_id" => 2
         ]) ;
-//        Tournament::create([
-//            "logo" => "https://img.redbull.com/images/e_trim:10:transparent/c_limit,w_1000,h_1000/bo_5px_solid_rgb:00000000/q_auto,f_png/redbullcom/2021/1/19/fq0bsevvgrrjv71s9cgs/red-bull-campus-clutch-main",
-//            "name" => "Red Bull Campus Clutch 2022 - World Final Stage" ,
-//            "game_id" => 2 ,
-//            "description" => "Red Bull Campus Clutch is a tournament hosted by Red Bull hosting students from over 50 countries.",
-//            "total_prize" => 1000000,
-//            "location" => "São Paulo, Brazil",
-//            "first_team_prize" => 500000,
-//            "second_team_prize" => 350000,
-//            "third_team_prize" => 150000,
-//            "starting_date" => "2023-05-29 1:00:00",
-//            "status_id" => 1
-//
-//        ]) ;
+        Tournament::create([
+            "logo" => "https://griffon.octane.gg/events/crl-world-championship.png",
+            "name" => "Collegiate Rocket League 2023 - World Championship" ,
+            "game_id" => 3 ,
+            "description" => "Red Bull Campus Clutch is a tournament hosted by Red Bull hosting students from over 50 countries.The Collegiate Rocket League 2023 - World Championship is the second major intercontinental competition for collegiate Rocket League teams and players.",
+            "total_prize" => 1000000,
+            "location" => "United States - Dallas",
+            "first_team_prize" => 500000,
+            "second_team_prize" => 350000,
+            "third_team_prize" => 150000,
+            "starting_date" => "2023-05-15 1:00:00",
+            "status_id" => 2
+
+        ]) ;
 //        Tournament::create([
 //            "logo" => "https://upload.wikimedia.org/wikipedia/en/5/5f/LOL_Worlds_logo.svg",
 //            "name" => "League of Legends World Championship",

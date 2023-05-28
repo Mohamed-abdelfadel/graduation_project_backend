@@ -34,6 +34,8 @@ Route::get('/v1/verify-email/{id}/{hash}', [MailController::class, 'verify'])->n
 route::group(['middleware' => ['auth:sanctum']] , function (){
     Route::post('/v1/logout' , [GamerController::class , 'logout']) ;
     Route::get('/v1/profile',[GamerController::class , 'profile']) ;
+    Route::put('/v1/update_avatar', [GamerController::class ,"update_avatar"]);
+    Route::put('/v1/update_password',[GamerController::class , "update_password"]);
 });
 // USAGE-> PUBLIC routes >>
 
@@ -44,6 +46,8 @@ Auth::routes([
 Route::controller(GamerController::class)->group(function () {
     Route::post('/v1/login_data' ,'login') ;
     Route::post('/v1/signup_data','register') ;
+
+
 });
 // USAGE-> GAME routes
 Route::controller(GameController::class)->group(function () {
@@ -82,6 +86,7 @@ Route::controller(TournamentController::class)->group(function () {
     Route::get('/v1/tournament/{id}' ,'show') ;
     Route::get('/v1/tournament-matches/{id}' ,'duels') ;
     Route::get('/v1/tournament-news/{id}' ,'news') ;
+    Route::get('/v1/tournament-search' ,'search') ;
 });
 Route::controller(TournamentNewsController::class)->group(function () {
     Route::get('/v1/tournaments_news' ,'index') ;

@@ -89,7 +89,6 @@ With an absurd 12 total rounds of overtime, the matchup of FURIA vs. Sentinels o
 mwzera clutched a 1v3 to begin the map in favor of FURIA. TenZ won the 1v1 in the bonus round for Sentinels, who quickly tied the map up 2-2. After trading control of the map, the first half ended evenly 6-6.",
             "author" => "VALORANT Champions Americas League",
         ]) ;
-
         Tournament_news::create([
             "image" => "https://owcdn.net/img/646d8ded46ae4.jpg" ,
             "title" => "Double upsets start VCT Americas playoffs" ,
@@ -117,14 +116,60 @@ With the momentum in their favor, LOUD began taking round after round, often ove
         "author" => "VALORANT Champions Americas League",
         ]) ;
 
-//        Tournament_news::create([
-//            "image" => "" ,
-//            "title" => "" ,
-//            "tournament_id" => 1,
-//            "description" => "",
-//            "author" => "",
-//        ]) ;
-
+        Tournament_news::create([
+            "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt0476420d7e9bfda2/63dc2c7e4cd3b46624f763d8/MSI23_Announcement_Header.png" ,
+            "title" => "Save-the-Date: MSI 2023 is Coming to London!" ,
+            "tournament_id" => 3,
+            "description" => "The League of Legends Mid-Season Invitational is coming to London! From May 2-21, 13 qualified teams from around the world will take to the global stage for the first time this year at Copper Box Arena, a key venue for esports located in Queen Elizabeth Olympic Park.
+MSI 2023 Theme and Format DEF
+Defy expectations. Defy haters. Defy doubts. MSI is all about showcasing regional strength midway through the season. It’s the first step toward greatness, pushing beyond limits and showing up with a spirit of defiance.
+This year, MSI will feature two double-elimination stages; the Play-In Stage and the Bracket Stage, giving regions more opportunity to defy all odds. If you’re not familiar with the changes, head over to the LoL Esports State of the Game article we released in January. Join us in person at the Copper Box Arena or tune in live on lolesports.com to cheer on your favorite region!
+Ticket Sales
+Tickets officially go on sale at 2 am PST/10 am GMT February 23! Prices range from £29-£94. Visit http://axs.com/lolmsi2023 to learn more.
+The Play-In Stage will be May 2-7
+The Bracket Stage will be May 9-14 and May 16-20
+The Final will be May 21",
+            "author" => "League of legends MSI 2023",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt3882079e3f329415/63d39a3399f0c910e1719951/LEC_Winter_2023.jpg" ,
+            "title" => "Here are the records to beat for the LEC Winter Split!" ,
+            "tournament_id" => 3,
+            "description" => "This past weekend, we stepped into a new era of the LEC. EU has become EMEA, complete with an all-new format and a few fresh faces – including our new competitor Team Heretics, and the newly-rebranded KOI. But at our heart we’re still the same LEC that we’ve always been, and what would the LEC be if we didn’t take a second to look back at our legacy?
+Throughout our ten years of compelling competitive play, from the early days of the EU LCS to the current pillar of EMEA esports that is the LEC, we’ve seen some incredible players step up to the plate to write their names in the League of Legends history books. Records have been made, and broken, time and time again as metas develop and players come and go.
+Just one weekend in, our players have already laid some strong claims to a spot in those history books. While Team Vitality and G2 Esports set themselves apart, refusing to drop even a single game, we’ve got a messy brawl in the middle of the standings as teams look to assign a pecking order after a long and turbulent offseason.
+We saw rookies rise (shoutout to G2 Esports’ Yike, who currently has the highest total kills of any player in the league over their first three days playing on the LEC stage). And we saw veterans stumble, as new synergies and old rivalries led to some shaky showings from former superstars.
+With the opening weekend of our LEC Winter Split now behind us, we wanted to take a look back into the misty depths of time at some of the LEC’s longest-standing records. It’ll take a whole lot of skill (and maybe just a little bit of luck), but there’s no better way for our teams to cement themselves as the region’s best by breaking one of our long-standing records.",
+            "author" => "League of legends MSI 2023",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/FuOcmcFWYAI_aVm?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "Registration for the League of Legends Playground Championship is open for its first season this year in the Middle East and Africa region!",
+            "author" => "",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/FuaSysVWwAQs1cF?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "here are only three days left until registration for the League of Legends Playground Tournament closes!",
+            "author" => "",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/Fu0ekK_WwAI7z2Z?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "For the first time, watch the entire MSI tournament in Arabic with the streamer Dattura6 ! All you have to do is head over to his Twitch channel and catch up on all the exciting matches!",
+            "author" => "",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://pbs.twimg.com/media/Fs3xLa6WIAAFeML?format=jpg" ,
+            "title" => "" ,
+            "tournament_id" => 4,
+            "description" => "The friendly match that brings together influencers and streamers in Turkey and the MENA region has now started!",
+            "author" => "",
+        ]) ;
 //        Tournament_news::create([
 //            "image" => "" ,
 //            "title" => "" ,

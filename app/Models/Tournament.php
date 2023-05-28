@@ -24,7 +24,7 @@ class Tournament extends Model
             ->with("team2:id,name,logo")
             ->with("playoff:id,name")
             ->with("status:id,name")
-            ->orderBy("playoff_id","desc");
+            ->orderBy("status_id","desc");
 //            ->whereBetween('starting_date',[$yesterday, $tomorrow]);
         //            ->with("tournament:id,name,logo")
     }

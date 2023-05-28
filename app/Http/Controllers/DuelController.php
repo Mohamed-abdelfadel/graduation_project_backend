@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreGameRequest;
 use App\Models\Duel;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 class DuelController extends Controller
@@ -104,21 +105,43 @@ class DuelController extends Controller
             ];
         }
     public static function Reset_Status() {
-        $now = Carbon::now('Europe/Istanbul')->format('Y-m-d H:00:00');
+        $now = Carbon::now('Asia/Riyadh')->format('Y-m-d HH:00:00');
         $duels = Duel::query()->get();
 
         foreach ($duels as $duel) {
-            $startingDate = Carbon::parse($duel->starting_date, 'Europe/Istanbul')->format('Y-m-d H:00:00');
+            $startingDate = Carbon::parse($duel->starting_date, 'Asia/Riyadh')->format('Y-m-d HH:00:00');
             if ($startingDate > $now) {
                 $duel->team1_score = null;
                 $duel->team2_score = null;
                 $duel->status_id = 3;
+                $duel->save();
+
             } elseif ($startingDate < $now) {
                 $duel->status_id = 1;
-            } else {
-                $duel->status_id = 2;
+                $duel->save();
+
             }
-            $duel->save();
+            else if ($startingDate === $now){
+                $duel->status_id = 2;
+                $duel->save();
+                $FcmToken = User::whereNotNull('device_key')
+                    ->pluck('device_key');
+
+                if (count($FcmToken) == 0) {
+                    return response()->json(['data' => 'Added Successfully ss'], 200);
+                }
+
+                $data = [
+                    "registration_ids" => $FcmToken,
+                    "notification" => [
+                        "title" => "Hello",
+                        "body" => "message"
+                    ]
+                ];
+                FirebaseController::sendWebNotification($data);
+
+                return response()->json(['data' => 'created successfully'], 200);
+            }
         }
     }
 

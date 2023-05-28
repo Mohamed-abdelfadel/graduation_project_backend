@@ -53,7 +53,7 @@ class TournamentController extends Controller
     public function duels($id){
         $tournaments = Tournament::query()
             ->select(['id'])
-            ->with('duels:id,tournament_id,team1_id,team2_id,team1_score,team2_score,playoff_id')
+            ->with('duels:id,tournament_id,team1_id,team2_id,team1_score,team2_score,playoff_id,status_id')
             ->findOrFail($id);
         return response($tournaments) ;
     }
@@ -66,7 +66,21 @@ class TournamentController extends Controller
             ->get();
         return response($news) ;
     }
-
+//    public function list(){
+//        if(request('search')){
+//            $search = request('search') ;
+//            $customers = Customer::where('name', 'like', "%$search%")->orWhere('id', 'like', "%$search%")->orWhere('phone', 'like', "%$search%")->orWhere('email', 'like', "%$search%")->orWhere('address', 'like', "%$search%")->paginate(10)->withQueryString();
+//        }
+//        else{
+//            $customers = Customer::query()->latest('updated_at')->with('city')->paginate(10) ;
+//        }
+//        return view('customers.list' , compact('customers')) ;
+//    }
+//    public function search(){
+//        $search = request('search') ;
+//        $tournaments = Tournament::
+//        return response($tournaments) ;
+//    }
 
 //  TODO-> Start working on ADMIN pages (Store , Update , Delete):
 }
