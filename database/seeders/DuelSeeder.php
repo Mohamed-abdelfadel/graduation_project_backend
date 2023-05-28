@@ -15,9 +15,9 @@ class DuelSeeder extends Seeder
      */
     public function run()
     {
-        $first_date = "2023-05-27";
-        $middle_date = "2023-05-28";
-        $last_date = "2023-05-29";
+        $first_date = "2023-05-28";
+        $middle_date = "2023-05-29";
+        $last_date = "2023-05-30";
         //tournament 1 matches
         Duel::create([
             "playoff_id" => 1,
