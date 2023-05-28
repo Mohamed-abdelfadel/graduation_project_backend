@@ -101,9 +101,11 @@ class GamerController extends Controller
         $profile = User::query()->select("name","email","created_at","avatar_id")->findOrFail($user_id);
         return response($profile);
     }
-    public function update_avatar(Request $request , $id){
-        if (User::find($id)){
-            $user = User::find($id);
+    public function update_avatar(Request $request){
+        if (Auth::user()->id){
+            $user_id = Auth::user()->id;
+            $user = User::query()->findOrFail($user_id);
+
             if ($request['avatar_id'] >0 and  $request['avatar_id'] <=10){
                 $user->avatar_id = $request['avatar_id'];
                 $user->save();
@@ -119,7 +121,7 @@ class GamerController extends Controller
     }
 
 
-    public function update_password(Request $request, $id)
+    public function update_password(Request $request)
     {
         $rules = [
             'current_password' => ['required'],
@@ -130,8 +132,8 @@ class GamerController extends Controller
 
         $current_password = $data['current_password'];
 
-        $user = User::find($id);
-
+        $user_id = Auth::user()->id;
+        $user = User::query()->findOrFail($user_id);
         if (!Hash::check($current_password, $user->password)) {
             return response()->json(['message' => 'This password does not match'], 400);
         }
