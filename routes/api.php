@@ -44,6 +44,9 @@ Auth::routes([
 Route::controller(GamerController::class)->group(function () {
     Route::post('/v1/login_data' ,'login') ;
     Route::post('/v1/signup_data','register') ;
+    Route::put('/v1/update_avatar/{id}', "update_avatar");
+    Route::put('/v1/update_password/{id}', "update_password");
+
 });
 // USAGE-> GAME routes
 Route::controller(GameController::class)->group(function () {

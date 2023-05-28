@@ -15,9 +15,9 @@ class DuelSeeder extends Seeder
      */
     public function run()
     {
-        $first_date = "2023-05-26";
-        $middle_date = "2023-05-27";
-        $last_date = "2023-05-28";
+        $first_date = "2023-05-27";
+        $middle_date = "2023-05-28";
+        $last_date = "2023-05-29";
         //tournament 1 matches
         Duel::create([
             "playoff_id" => 1,
@@ -29,7 +29,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 1,
             "team2_id" => 10,
             "tournament_id" => 1,
-            "starting_date" => "{$first_date} 0:03:44",
+            "starting_date" => "{$first_date} 00:03:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -42,7 +42,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 7,
             "team2_id" => 5,
             "tournament_id" => 1,
-            "starting_date" => "{$first_date} 0:04:44",
+            "starting_date" => "{$first_date} 00:04:44",
             "status_id" => 1
         ]) ;
 
@@ -56,7 +56,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 3,
             "team2_id" => 6,
             "tournament_id" => 1,
-            "starting_date" => "{$first_date} 0:05:44",
+            "starting_date" => "{$first_date} 00:05:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -69,7 +69,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 2,
             "team2_id" => 8,
             "tournament_id" => 1,
-            "starting_date" => "{$first_date} 0:05:44",
+            "starting_date" => "{$first_date} 00:05:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -82,7 +82,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 10,
             "team2_id" => 5,
             "tournament_id" => 1,
-            "starting_date" => "{$first_date} 0:03:44",
+            "starting_date" => "{$first_date} 00:03:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -95,7 +95,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 3,
             "team2_id" => 2,
             "tournament_id" => 1,
-            "starting_date" => "{$first_date} 0:03:44",
+            "starting_date" => "{$first_date} 00:03:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -108,7 +108,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 1,
             "team2_id" => 7,
             "tournament_id" => 1,
-            "starting_date" => "{$middle_date} 12:05:44",
+            "starting_date" => "{$middle_date} 00:05:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -121,7 +121,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 5,
             "team2_id" => 8,
             "tournament_id" => 1,
-            "starting_date" => "{$middle_date} 12:05:44",
+            "starting_date" => "{$middle_date} 00:05:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -134,7 +134,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 6,
             "team2_id" => 10,
             "tournament_id" => 1,
-            "starting_date" => "{$middle_date} 02:03:44",
+            "starting_date" => "{$middle_date} 00:03:44",
             "status_id" => 1
         ]) ;
         Duel::create([
@@ -142,26 +142,26 @@ class DuelSeeder extends Seeder
             "platform"=>"youtube",
             "video_link"=>"https://www.youtube.com/embed/Yox4y5aauHs",
             "game_id" => 1 ,
-            "team1_score" => 0,
-            "team2_score" => 2,
+            "team1_score" => null,
+            "team2_score" => null,
             "team1_id" => 1,
             "team2_id" => 3,
             "tournament_id" => 1,
-            "starting_date" => "{$middle_date} 12:03:44",
-            "status_id" => 1
+            "starting_date" => "{$middle_date} 22:03:44",
+            "status_id" => 3
         ]) ;
         Duel::create([
             "platform"=>"youtube",
             "video_link"=>"https://www.youtube.com/embed/CHDPfolL4C8",
             "playoff_id" => 5,
             "game_id" => 1 ,
-            "team1_score" => 3,
-            "team2_score" => 2,
+            "team1_score" => null,
+            "team2_score" => null,
             "team1_id" => 7,
             "team2_id" => 8,
             "tournament_id" => 1,
             "starting_date" => "{$middle_date} 23:00:44",
-            "status_id" => 1
+            "status_id" => 3
         ]) ;
         Duel::create([
             "playoff_id" => 6,
@@ -173,7 +173,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 8,
             "team2_id" => 10,
             "tournament_id" => 1,
-            "starting_date" => "{$last_date} 12:06:44",
+            "starting_date" => "{$middle_date} 22:06:44",
             "status_id" => 3
         ]) ;
         Duel::create([
@@ -228,7 +228,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 19,
             "team2_id" => 16,
             "tournament_id" => 2,
-            "starting_date" => "{$middle_date} 12:06:44",
+            "starting_date" => "{$middle_date} 00:06:44",
             "status_id" =>1
         ]) ;
         Duel::create([
@@ -269,23 +269,23 @@ class DuelSeeder extends Seeder
         Duel::create([
             "playoff_id" => 5 ,
             "game_id" =>  2,
-            "team1_score" => 2,
-            "team2_score" => 1 ,
+            "team1_score" => 3,
+            "team2_score" => 1,
             "team1_id" => 19,
             "team2_id" => 15,
             "tournament_id" => 2,
-            "starting_date" => "{$middle_date} 02:06:44",
+            "starting_date" => "{$middle_date} 00:06:44",
             "status_id" =>1
         ]) ;
         Duel::create([
-            "playoff_id" => 6 ,
+            "playoff_id" => 6,
             "game_id" =>  2,
-            "team1_score" => 1,
-            "team2_score" => 3 ,
+            "team1_score" => null,
+            "team2_score" => null,
             "team1_id" => 15,
             "team2_id" => 21,
             "tournament_id" => 2,
-            "starting_date" => "{$last_date} 19:06:44",
+            "starting_date" => "{$middle_date} 18:06:44",
             "status_id" =>3
         ]) ;
         Duel::create([
