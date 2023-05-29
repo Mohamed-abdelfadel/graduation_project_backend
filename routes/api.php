@@ -91,6 +91,7 @@ Route::controller(TournamentController::class)->group(function () {
 Route::controller(TournamentNewsController::class)->group(function () {
     Route::get('/v1/tournaments_news' ,'index') ;
     Route::get('/v1/tournament_news/{id}' ,'tournament_news') ;
+    Route::get('/v1/tournament_new/{id}' ,'tournament_new') ;
 });
 
 // USAGE-> PLAYER routes

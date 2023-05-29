@@ -122,7 +122,6 @@ class GameController extends Controller
                 ->with("tournaments:id,game_id,name,logo")
                 ->get();
             return response($matches) ;
-
         }
 
 
