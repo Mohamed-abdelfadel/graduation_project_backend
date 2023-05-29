@@ -37,7 +37,7 @@ route::group(['middleware' => ['auth:sanctum']] , function (){
     Route::put('/v1/update_avatar', [GamerController::class ,"update_avatar"]);
     Route::put('/v1/update_password',[GamerController::class , "update_password"]);
 });
-// USAGE-> PUBLIC routes >>
+// USAGE-> PUBLIC routes >
 
 //USAGE-> GAMER routes
 Auth::routes([

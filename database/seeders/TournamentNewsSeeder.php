@@ -16,6 +16,7 @@ class TournamentNewsSeeder extends Seeder
     public function run()
     {
         Tournament_news::create([
+            "id"=>100,
             "image" => "https://owcdn.net/img/60ad86ef89420.jpg",
             "title" => "penny: 'It was definitely a mental battle between the two teams'" ,
             "tournament_id" => 1,
