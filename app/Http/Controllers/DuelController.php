@@ -121,25 +121,31 @@ class DuelController extends Controller
                 $duel->save();
             }
             else if ($startingDate === $now){
-                $duel->status_id = 2;
-                $duel->save();
-                $FcmToken = User::whereNotNull('device_key')
-                    ->pluck('device_key');
+                if($duel->status_id == 1){
 
-                if (count($FcmToken) == 0) {
-                    return response()->json(['data' => 'Added Successfully ss'], 200);
+                }
+                else{
+                    $duel->status_id = 2;
+                    $duel->save();
+                    $FcmToken = User::whereNotNull('device_key')
+                        ->pluck('device_key');
+
+                    if (count($FcmToken) == 0) {
+                        return response()->json(['data' => 'Added Successfully ss'], 200);
+                    }
+
+                    $data = [
+                        "registration_ids" => $FcmToken,
+                        "notification" => [
+                            "title" => "There are match ! ",
+                            "body" => "come to watch Live match now !"
+                        ]
+                    ];
+                    FirebaseController::sendWebNotification($data);
+
+                    return response()->json(['data' => 'created successfully'], 200);
                 }
 
-                $data = [
-                    "registration_ids" => $FcmToken,
-                    "notification" => [
-                        "title" => "There are match ! ",
-                        "body" => "come to watch Live match now !"
-                    ]
-                ];
-                FirebaseController::sendWebNotification($data);
-
-                return response()->json(['data' => 'created successfully'], 200);
             }
         }
     }

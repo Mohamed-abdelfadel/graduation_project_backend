@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class GameNewsController extends Controller
 {
     public function index(){
-        $game = Game_news::query()->orderBy('id' , 'desc')->paginate(9);
+        $game = Game_news::query()->orderBy('id' , 'desc')->get();
         return response($game);
     }
     public function show($id){

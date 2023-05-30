@@ -572,13 +572,13 @@ class DuelSeeder extends Seeder
         Duel::create([
             "playoff_id" =>4 ,
             "game_id" => 3 ,
-            "team1_score" => 3,
-            "team2_score" => 1,
+            "team1_score" => null,
+            "team2_score" => null,
             "team1_id" =>41 ,
             "team2_id" => 46,
             "tournament_id" => 5,
             "starting_date" => "{$middle_date} 02:06:44",
-            "status_id" =>1
+            "status_id" =>3
         ]) ;
         Duel::create([
             "playoff_id" =>7 ,
