@@ -11,11 +11,14 @@ class PlayerController extends Controller
     {
         return Player::query()->get() ;
     }
-    public function top_players($id){
-        $top_player = Player::query()
-            ->select('id', 'name',"team_id")
-            ->where("team_id","=","$id")->limit(3)->get();
-        return response($top_player);
+    public function top_players($tournament_id){
+        $top_players = Player::query()
+            ->join('teams', 'players.team_id', '=', 'teams.id')
+            ->select('players.id', 'players.name','players.image', 'teams.tournament_id')
+            ->where('teams.tournament_id', '=', $tournament_id)
+            ->limit(3)
+            ->get();
+        return response($top_players);
     }    /**
      * Show the form for creating a new resource.
      *

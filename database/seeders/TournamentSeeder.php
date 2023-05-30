@@ -49,7 +49,7 @@ class TournamentSeeder extends Seeder
 // League of Legends Tournaments
         Tournament::create([
             "logo" => "https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blta41e02bc63afde9e/624259588eea01703cb70d31/MSI_Logo-black.png",
-            "name" => "League of Legends World Championship",
+            "name" => "League of legends MSI 2023",
             "game_id" => 2,
             "description" => "The League of Legends World Championship is the pinnacle of competitive League of Legends play, featuringthe best teams from around the world competing for a multi-million dollar prize pool.",
             "total_prize" => 6000000,

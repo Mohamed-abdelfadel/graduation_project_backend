@@ -98,18 +98,20 @@ Route::controller(TournamentNewsController::class)->group(function () {
 Route::controller(PlayerController::class)->group(function () {
     Route::get('/v1/players' ,'index');
     Route::get('/v1/top-players/{id}' ,'top_players') ;
-
 });
 
 // USAGE-> DUELS(MATCHES) routes
 Route::controller(DuelController::class)->group(function () {
     Route::post('/v1/match','store');
+    Route::put('/v1/match_video/{id}','update');
+
     Route::get('/v1/matchess','index');
     Route::get('/v1/matchess/{id}','show');
     Route::get('/v1/update_matches','Reset_Status');
     Route::get('/v1/match/{id}','show');
     Route::get('/v1/match-trash','trash');
     Route::delete('/v1/match/{id}','destroy');
+
 });
 Route::get('/playground', function (){
     event(PlaygroundEvent::broadcast());
