@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('team2_score')->nullable() ;
             $table->string("platform")->nullable();
             $table->string("video_link")->nullable();
-            $table->timestamp('starting_date') ;
+            $table->dateTime('starting_date') ;
             $table->timestamps();
             $table->softDeletes() ;
 

@@ -16,4 +16,8 @@ class TournamentNewsController extends Controller
         $news = Tournament_news::query()->where("tournament_id" ,"=" , $id)->get();
         return response($news) ;
     }
+    public function tournament_new($id){
+        $news = Tournament_news::query()->findOrFail($id);
+        return response($news) ;
+    }
 }

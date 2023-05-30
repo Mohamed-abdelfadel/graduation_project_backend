@@ -10,6 +10,7 @@ class Duel extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $guarded = [];
     public function playoff(){
         return $this->belongsTo(Playoff::class) ;
     }

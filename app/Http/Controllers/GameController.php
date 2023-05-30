@@ -115,19 +115,13 @@ class GameController extends Controller
             }
             return response()->json(array_values($response));
         }
-
         else{
             $matches = Game::query()
                 ->select("id" , "name")
                 ->with("tournaments:id,game_id,name,logo")
                 ->get();
             return response($matches) ;
-
         }
-
-
-
-
     }
 
 

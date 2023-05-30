@@ -119,28 +119,33 @@ class DuelController extends Controller
             } elseif ($startingDate < $now) {
                 $duel->status_id = 1;
                 $duel->save();
-
             }
             else if ($startingDate === $now){
-                $duel->status_id = 2;
-                $duel->save();
-                $FcmToken = User::whereNotNull('device_key')
-                    ->pluck('device_key');
+                if($duel->status_id == 1){
 
-                if (count($FcmToken) == 0) {
-                    return response()->json(['data' => 'Added Successfully ss'], 200);
+                }
+                else{
+                    $duel->status_id = 2;
+                    $duel->save();
+                    $FcmToken = User::whereNotNull('device_key')
+                        ->pluck('device_key');
+
+                    if (count($FcmToken) == 0) {
+                        return response()->json(['data' => 'Added Successfully ss'], 200);
+                    }
+
+                    $data = [
+                        "registration_ids" => $FcmToken,
+                        "notification" => [
+                            "title" => "There are match ! ",
+                            "body" => "come to watch Live match now !"
+                        ]
+                    ];
+                    FirebaseController::sendWebNotification($data);
+
+                    return response()->json(['data' => 'created successfully'], 200);
                 }
 
-                $data = [
-                    "registration_ids" => $FcmToken,
-                    "notification" => [
-                        "title" => "Hello",
-                        "body" => "message"
-                    ]
-                ];
-                FirebaseController::sendWebNotification($data);
-
-                return response()->json(['data' => 'created successfully'], 200);
             }
         }
     }
@@ -164,17 +169,17 @@ class DuelController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->json()->all();
+        $record = Duel::find($id);
+        $record->platform = $data['platform'];
+        $record->video_link = $data['video_link'];
+        $record->save();
+        return response()->json(['message' => 'Record updated successfully']);
     }
+
     public function destroy($id){
         $match = Duel::query()->findOrFail($id) ;
         $match->delete() ;

@@ -576,33 +576,350 @@ class PlayerSeeder extends Seeder
         ]) ;
 
         Player::create([
-            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
-            "name" => "Maged" ,
-            "description" => "Maged 'Maged' Marwan (born January 14, 2001) is an Egyptian player who is currently playing as a Toplaner for RA'AD.",
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "Bin" ,
+            "description" => " Chen 'Bin' Zebin (born September 28, 2002) is a Chinese player who is currently playing as a Toplaner for Bilibili Gaming.",
             "game_id" => 1,
-            "team_id" => 34
+            "team_id" => 23
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "XUN" ,
+            "description" => " Peng 'XUN' Lixun (born February 5, 2002) is a Chinese player who is currently playing as a Jungler for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 23
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "Yagao" ,
+            "description" => "Zeng 'Yagao' Qi (born October 19, 1998) is a Chinese player who is currently playing as a Midlaner for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 23
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "Elk" ,
+            "description" => "Zhao 'Elk' Jiahao (born September 29, 2001) is a Chinese player who is currently playing as a Botlaner for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 23
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "ON" ,
+            "description" => "Luo 'ON' Wenjun (born May 12, 2003) is a Chinese player who is currently playing as a Support for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 23
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" ,
+            "name" => "ShahZaM" ,
+            "description" => "Shahzeb 'ShahZaM' Khan (born October 8, 1993) is an American player who is currently playing as an in-game leader for G2 Esports. He is a former Counter-Strike: Global Offensive player who is mostly known for his time in Cloud9, OpTic and Complexity Gaming.",
+            "game_id" => 1,
+            "team_id" => 25
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" ,
+            "name" => "dapr" ,
+            "description" => "Michael 'dapr' Gulino (born January 1, 1999) is an American player who is currently playing for G2 Esports. He is a former professional Counter-Strike: Global Offensive player.",
+            "game_id" => 1,
+            "team_id" => 25
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png" ,
+            "name" => "wippie" ,
+            "description" => "Maxim 'wippie' Shepelev (born May 31, 1999) is a Russian player who is currently playing for G2 Esports. He is a retired professional Counter-Strike: Global Offensive player.",
+            "game_id" => 1,
+            "team_id" => 25
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/2560px-Flag_of_Canada.svg.png" ,
+            "name" => "penny" ,
+            "description" => "Erik 'penny' Penny (born January 7, 2003) is a Canadian player who is currently playing for G2 Esports. He is a former professional Counter-Strike: Global Offensive player.",
+            "game_id" => 1,
+            "team_id" => 25
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" ,
+            "name" => "OXY" ,
+            "description" => "Francis 'OXY' Hoang (born April 30, 2005) is an American player who is currently playing for G2 Esports.",
+            "game_id" => 1,
+            "team_id" => 25
+        ]) ;
+
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Doran" ,
+            "description" => "Choi 'Doran' Hyeon-joon (born July 22, 2000) is a Korean player who is currently playing as a Toplaner for Gen.G Esports.",
+            "game_id" => 1,
+            "team_id" => 26
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "" ,
+            "description" => "",
+            "game_id" => 1,
+            "team_id" => 26
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Peanut" ,
+            "description" => "Han 'Peanut' Wang-ho (born February 3, 1998) is a Korean player who is currently playing as a Jungler for Gen.G Esports.",
+            "game_id" => 1,
+            "team_id" => 26
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Chovy" ,
+            "description" => "Jeong 'Chovy' Ji-hoon (born March 3, 2001) is a Korean player who is currently playing as a Midlaner for Gen.G Esports.",
+            "game_id" => 1,
+            "team_id" => 26
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Peyz" ,
+            "description" => "Kim 'Peyz' Su-hwan (born December 5, 2005) is a Korean player who is currently playing as a Botlaner for Gen.G Esports.",
+            "game_id" => 1,
+            "team_id" => 26
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Delight" ,
+            "description" => "Yoo 'Delight' Hwan-joong (born September 12, 2002) is a Korean player who is currently playing as a Support for Gen.G Esports.",
+            "game_id" => 1,
+            "team_id" => 26
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Zeus" ,
+            "description" => "Choi 'Zeus' Woo-je (born January 31, 2004) is a Korean player and Top laner for T1. He's also known as Wooje.",
+            "game_id" => 1,
+            "team_id" => 27
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Oner" ,
+            "description" => "Moon 'Oner' Hyeon-joon (born December 24, 2002) is a South Korean player who is currently playing as a Jungler for T1.",
+            "game_id" => 1,
+            "team_id" => 27
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Faker" ,
+            "description" => "Lee 'Faker' Sang-hyeok (born May 7, 1996) is a Korean player who is currently playing as a Midlaner for T1.",
+            "game_id" => 1,
+            "team_id" => 27
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Gumayusi" ,
+            "description" => "Lee 'Gumayusi' Min-hyeong (born February 6, 2002) is a Korean player who is currently playing as a Botlaner for T1.",
+            "game_id" => 1,
+            "team_id" => 27
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Keria" ,
+            "description" => "Ryu 'Keria' Min-seok (born October 14, 2002) is a Korean player and support for T1. He graduated from DragonX's trainee program and made his debut in the 2019 KeSPA Cup together with fellow former trainee Pyosik.",
+            "game_id" => 1,
+            "team_id" => 27
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/1024px-Flag_of_Australia.svg.png" ,
+            "name" => "Fudge" ,
+            "description" => "Ibrahim 'Fudge' Allami (born May 23, 2002) is an Australian player who is currently playing as a Midlaner for Cloud9.",
+            "game_id" => 1,
+            "team_id" => 28
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" ,
+            "name" => "Blaber" ,
+            "description" => "Robert 'Blaber' Huang is an American player who is playing as a Jungler for Cloud9.",
+            "game_id" => 1,
+            "team_id" => 28
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "EMENES" ,
+            "description" => "Jang 'EMENES' Min-soo (born January 1, 2001) is a Korean player who is currently playing as a Midlaner for Cloud9.",
+            "game_id" => 1,
+            "team_id" => 28
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Berserker" ,
+            "description" => "Kim 'Berserker' Min-cheol (born May 25, 2003) is a Korean player who is currently playing as a Botlaner for Cloud9.",
+            "game_id" => 1,
+            "team_id" => 28
         ]) ;
         Player::create([
             "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Denmark_fixed.svg/225px-Flag_of_Denmark_fixed.svg.png" ,
-            "name" => "Skude" ,
-            "description" => "Andreas 'Skude' Skude (born April 21, 1999) is a Danish player who is currently playing as a Jungler for RA'AD.",
+            "name" => "Zven" ,
+            "description" => "Jesper 'Zven' Svenningsen (born June 24, 1997) is a Danish player who is currently playing as a Support for Cloud9.",
             "game_id" => 1,
-            "team_id" => 34
+            "team_id" => 28
         ]) ;
         Player::create([
-            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
-            "name" => "Mangoo" ,
-            "description" => "Mohamed 'Mangoo' Hossam (born January 15, 2004) is an Egyptian player who is currently playing as a substitute Botlaner for RA'AD.",
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "knight" ,
+            "description" => "Zhuo 'knight' Ding (born May 22, 2000) is a Chinese player who is currently playing as a Midlaner for JD Gaming.",
             "game_id" => 1,
-            "team_id" => 34
+            "team_id" => 29
         ]) ;
         Player::create([
-            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
-            "name" => "Nufall" ,
-            "description" => "Abdallah 'Nufall' Mohamed (born December 1, 2001) is an Egyptian player who is currently playing as a substitute jg for RA'AD.",
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "MISSING" ,
+            "description" => "Lou 'MISSING' Yunfeng (born May 26, 2001) is a Chinese player who is currently playing as a Support for JD Gaming.",
             "game_id" => 1,
-            "team_id" => 34
+            "team_id" => 29
         ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Kanavi" ,
+            "description" => "Seo 'Kanavi' Jin-hyeok (born November 2, 2000) is a Korean player who is currently a Jungler for JD Gaming.",
+            "game_id" => 1,
+            "team_id" => 29
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png" ,
+            "name" => "Ruler" ,
+            "description" => "Park 'Ruler' Jae-hyuk (born December 29, 1998) is a Korean player who is currently playing as a Botlaner for JD Gaming.",
+            "game_id" => 1,
+            "team_id" => 29
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "Bin" ,
+            "description" => " Chen 'Bin' Zebin (born September 28, 2002) is a Chinese player who is currently playing as a Toplaner for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 30
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "XUN" ,
+            "description" => " Peng 'XUN' Lixun (born February 5, 2002) is a Chinese player who is currently playing as a Jungler for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 30
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "Yagao" ,
+            "description" => "Zeng 'Yagao' Qi (born October 19, 1998) is a Chinese player who is currently playing as a Midlaner for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 30
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "Elk" ,
+            "description" => "Zhao 'Elk' Jiahao (born September 29, 2001) is a Chinese player who is currently playing as a Botlaner for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 30
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/90/7490-004-BAD4AA72/Flag-China.jpg" ,
+            "name" => "ON" ,
+            "description" => "Luo 'ON' Wenjun (born May 12, 2003) is a Chinese player who is currently playing as a Support for Bilibili Gaming.",
+            "game_id" => 1,
+            "team_id" => 30
+        ]) ;
+
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg" ,
+            "name" => "Klaus" ,
+            "description" => "Nicolas 'Klaus' Ferrari (born April 4, 2001) is an Argentinian player who currently plays for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 31
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg" ,
+            "name" => "NagZ" ,
+            "description" => "Juan Pablo 'NagZ' Lopez Miranda is a Chilean player who currently plays for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 31
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/68/7668-004-08492AB7/Flag-Colombia.jpg" ,
+            "name" => "Daveeys" ,
+            "description" => "Santiago 'Daveeys' Ruiz (born September 2, 2000) is a Colombian player who is currently playing for KRÜ Esports. He is an ex-professional Counter-Strike: Global Offensive player known for his time in Infinity Esports",
+            "game_id" => 1,
+            "team_id" => 31
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg" ,
+            "name" => "Melser" ,
+            "description" => "Marco 'Melser' Amaro (born May 12, 1995) is a Chilean player who is currently playing for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 31
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg" ,
+            "name" => "keznit" ,
+            "description" => "Angelo 'keznit' Mori (born August 14, 2001) is a Chilean player who is currently playing for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 31
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "axeddy" ,
+            "description" => "Carlos 'axeddy' Galvão (born June 11, 2003) is a Brazilian player who is currently playing for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 31
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "Laz" ,
+            "description" => "Koji 'Laz' Ushida (born November 26, 1995) is a Japanese player who is currently playing for ZETA DIVISION.",
+            "game_id" => 1,
+            "team_id" => 32
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "crow" ,
+            "description" => "Tomoaki 'crow' Maruoka (born November 28, 1997) is a Japanese player who is currently playing for ZETA DIVISION.",
+            "game_id" => 1,
+            "team_id" => 32
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "Dep" ,
+            "description" => "Yuma 'Dep' Hashimoto (born December 4, 2000) is a Japanese player who currently plays for ZETA DIVISION. Prior to playing VALORANT, he was a professional Overwatch and PUBG player, and represented his country in the Overwatch World Cup 2018 and PUBG Nations Cup 2019, respectively.",
+            "game_id" => 1,
+            "team_id" => 32
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "TENNN" ,
+            "description" => "Tenta 'TENNN' Asai (born October 19, 2001) is a Japanese player who currently plays for ZETA DIVISION. Prior to playing VALORANT, he was a professional Overwatch player, and represented his country in the Overwatch World Cup 2019.",
+            "game_id" => 1,
+            "team_id" => 32
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "SugarZ3ro" ,
+            "description" => "Shota 'SugarZ3ro' Watanabe (born March 18, 2003) is a Japanese player who currently plays for ZETA DIVISION. He is a former Rainbow Six Siege player.",
+            "game_id" => 1,
+            "team_id" => 32
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "barce" ,
+            "description" => "Ryo 'barce' Takebayashi (born August 22, 1996) is a Japanese player who is currently playing for ZETA DIVISION.",
+            "game_id" => 1,
+            "team_id" => 32
+        ]) ;
+
 
         Player::create([
             "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" ,
@@ -639,6 +956,37 @@ class PlayerSeeder extends Seeder
             "game_id" => 1,
             "team_id" => 33
         ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Maged" ,
+            "description" => "Maged 'Maged' Marwan (born January 14, 2001) is an Egyptian player who is currently playing as a Toplaner for RA'AD.",
+            "game_id" => 1,
+            "team_id" => 34
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Denmark_fixed.svg/225px-Flag_of_Denmark_fixed.svg.png" ,
+            "name" => "Skude" ,
+            "description" => "Andreas 'Skude' Skude (born April 21, 1999) is a Danish player who is currently playing as a Jungler for RA'AD.",
+            "game_id" => 1,
+            "team_id" => 34
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Mangoo" ,
+            "description" => "Mohamed 'Mangoo' Hossam (born January 15, 2004) is an Egyptian player who is currently playing as a substitute Botlaner for RA'AD.",
+            "game_id" => 1,
+            "team_id" => 34
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/800px-Flag_of_Egypt.svg.png" ,
+            "name" => "Nufall" ,
+            "description" => "Abdallah 'Nufall' Mohamed (born December 1, 2001) is an Egyptian player who is currently playing as a substitute jg for RA'AD.",
+            "game_id" => 1,
+            "team_id" => 34
+        ]) ;
+
+
         Player::create([
             "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/2000px-Flag_of_Saudi_Arabia.svg.png" ,
             "name" => "Wufo" ,
@@ -752,7 +1100,6 @@ class PlayerSeeder extends Seeder
             "description" => "Ali 'Akazan' Mkharbeche (born March 1, 2000) is a Moroccan player who is currently playing as a substitute Toplaner for Fox Gaming.",
             "game_id" => 1,
             "team_id" => 38
-
         ]) ;
 
         Player::create([
@@ -818,6 +1165,285 @@ class PlayerSeeder extends Seeder
             "description" => "Johannes 'Postkassen' Thuesen is a Danish player who is currently playing as a Support for GnG Esports.",
             "game_id" => 1,
             "team_id" => 40
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/49/1949-004-8818300C/Flag-South-Korea.jpg" ,
+            "name" => "Foxy9" ,
+            "description" => "Jung 'Foxy9' Jae-sung (born November 20, 2004) (formerly known as 'SeolHwa') is a South Korean player who currently plays for DRX",
+            "game_id" => 1,
+            "team_id" => 41
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "aspas" ,
+            "description" => "Erick 'aspas' Santos (born June 15, 2003) is a Brazilian player who is currently playing for LOUD.",
+            "game_id" => 1,
+            "team_id" => 41
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "Less" ,
+            "description" => "Felipe 'Less' Basso (born February 24, 2005) is a Brazilian player who is currently playing for LOUD.",
+            "game_id" => 1,
+            "team_id" => 41
+
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg" ,
+            "name" => "Saadhak" ,
+            "description" => "Matias 'Saadhak' Delipetro (born March 8, 1997) is an Argentine player who is currently playing for LOUD.",
+            "game_id" => 1,
+            "team_id" => 41
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "cauanzin" ,
+            "description" => "Cauan 'cauanzin' Pereira (born August 2, 2005) is a Brazilian player who is currently playing for LOUD.",
+            "game_id" => 1,
+            "team_id" => 41
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "tuyz" ,
+            "description" => "Arthur 'tuyz' Vieira (born August 3, 2003) is a Brazilian player who is currently playing for LOUD.",
+            "game_id" => 1,
+            "team_id" => 41
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/2560px-Flag_of_Canada.svg.png" ,
+            "name" => "Marved" ,
+            "description" => "Jimmy 'Marved' Nguyen (born February 24, 2000) is a Canadian player who is currently playing for Sentinels. He is a former Counter-Strike: Global Offensive player.",
+            "game_id" => 1,
+            "team_id" => 42
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/2560px-Flag_of_Canada.svg.png" ,
+            "name" => "FNS" ,
+            "description" => "Pujan 'FNS' Mehta (born March 19, 1992) is a Canadian player who is currently playing as an in-game leader for NRG. He is a former Counter-Strike: Global Offensive player",
+            "game_id" => 1,
+            "team_id" => 42
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" ,
+            "name" => "yay" ,
+            "description" => "Jaccob 'yay' Whiteaker (born September 9, 1998) is an American player who is currently playing for Disguised. He is a former Counter-Strike: Global Offensive player." ,
+            "game_id" => 1,
+            "team_id" => 42
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" ,
+            "name" => "Victor" ,
+            "description" => "Victor 'Victor' Wong (born September 14, 1996) is an American player who is currently playing for NRG. He is a former Counter-Strike: Global Offensive player known for his time on Swole Patrol and eUnited.",
+            "game_id" => 1,
+            "team_id" => 42
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg" ,
+            "name" => "crashies" ,
+            "description" => "Austin 'crashies' Roberts (born December 20, 1997) is an American player who is currently playing for NRG.",
+            "game_id" => 1,
+            "team_id" => 42
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg" ,
+            "name" => "xZe" ,
+            "description" => "Tanawat 'xZe' Kannark is a Thai player who is currently playing for XERXIA.",
+            "game_id" => 1,
+            "team_id" => 43
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "LBY" ,
+            "description" => "Eisuke 'LBY' Kuraoka is a Japanese player who is currently playing for XERXIA.",
+            "game_id" => 1,
+            "team_id" => 43
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg" ,
+            "name" => "aLerT" ,
+            "description" => "Wattanachok 'aLerT' Yingnakorn is a Thai player who is currently playing for XERXIA.",
+            "game_id" => 1,
+            "team_id" => 43
+
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg" ,
+            "name" => "CigaretteS" ,
+            "description" => "Patiphan 'CigaretteS' Posri is a Thai player who is currently playing for Paper Rex. He is a former Counter-Strike: Global Offensive and PUBG player known for playing on Signature Gaming and Made in Thailand.",
+            "game_id" => 1,
+            "team_id" => 43
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png" ,
+            "name" => "something" ,
+            "description" => "Ilya 'something' Petrov (born February 11, 2002) is a Russian player who is currently playing for Paper Rex.",
+            "game_id" => 1,
+            "team_id" => 43
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "Laz" ,
+            "description" => "Koji 'Laz' Ushida (born November 26, 1995) is a Japanese player who is currently playing for ZETA DIVISION.",
+            "game_id" => 1,
+            "team_id" => 44
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "crow" ,
+            "description" => "Tomoaki 'crow' Maruoka (born November 28, 1997) is a Japanese player who is currently playing for ZETA DIVISION.",
+            "game_id" => 1,
+            "team_id" => 44
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "Dep" ,
+            "description" => "Yuma 'Dep' Hashimoto (born December 4, 2000) is a Japanese player who currently plays for ZETA DIVISION. Prior to playing VALORANT, he was a professional Overwatch and PUBG player, and represented his country in the Overwatch World Cup 2018 and PUBG Nations Cup 2019, respectively.",
+            "game_id" => 1,
+            "team_id" => 44
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "TENNN" ,
+            "description" => "Tenta 'TENNN' Asai (born October 19, 2001) is a Japanese player who currently plays for ZETA DIVISION. Prior to playing VALORANT, he was a professional Overwatch player, and represented his country in the Overwatch World Cup 2019.",
+            "game_id" => 1,
+            "team_id" => 44
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "SugarZ3ro" ,
+            "description" => "Shota 'SugarZ3ro' Watanabe (born March 18, 2003) is a Japanese player who currently plays for ZETA DIVISION. He is a former Rainbow Six Siege player.",
+            "game_id" => 1,
+            "team_id" => 44
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png" ,
+            "name" => "barce" ,
+            "description" => "Ryo 'barce' Takebayashi (born August 22, 1996) is a Japanese player who is currently playing for ZETA DIVISION.",
+            "game_id" => 1,
+            "team_id" => 44
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg" ,
+            "name" => "Klaus" ,
+            "description" => "Nicolas 'Klaus' Ferrari (born April 4, 2001) is an Argentinian player who currently plays for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 45
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg" ,
+            "name" => "NagZ" ,
+            "description" => "Juan Pablo 'NagZ' Lopez Miranda is a Chilean player who currently plays for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 45
+
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/68/7668-004-08492AB7/Flag-Colombia.jpg" ,
+            "name" => "Daveeys" ,
+            "description" => "Santiago 'Daveeys' Ruiz (born September 2, 2000) is a Colombian player who is currently playing for KRÜ Esports. He is an ex-professional Counter-Strike: Global Offensive player known for his time in Infinity Esports",
+            "game_id" => 1,
+            "team_id" => 45
+
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg" ,
+            "name" => "Melser" ,
+            "description" => "Marco 'Melser' Amaro (born May 12, 1995) is a Chilean player who is currently playing for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 45
+
+        ]) ;
+        Player::create([
+            "image" => "https://cdn.britannica.com/85/7485-004-00B07230/Flag-Chile.jpg" ,
+            "name" => "keznit" ,
+            "description" => "Angelo 'keznit' Mori (born August 14, 2001) is a Chilean player who is currently playing for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 45
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "axeddy" ,
+            "description" => "Carlos 'axeddy' Galvão (born June 11, 2003) is a Brazilian player who is currently playing for KRÜ Esports.",
+            "game_id" => 1,
+            "team_id" => 45
+
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "xand" ,
+            "description" => "Alexandre 'xand' Zizi (born April 11, 1995) is a Brazilian player who is currently playing for 00 Nation.",
+            "game_id" => 1,
+            "team_id" => 46
+
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "Jonn" ,
+            "description" => "Walney 'Jonn' Reis is a Brazilian player who last played for RED Canids.",
+            "game_id" => 1,
+            "team_id" => 46
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "bezn1" ,
+            "description" => "Gabriel 'bezn1' Costa is a Brazilian player who is currently playing for 00 Nation. He is a former Point Blank player.",
+            "game_id" => 1,
+            "team_id" => 46
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "cauanzin" ,
+            "description" => "Cauan 'cauanzin' Pereira (born August 2, 2005) is a Brazilian player who is currently playing for LOUD.",
+            "game_id" => 1,
+            "team_id" => 46
+        ]) ;
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "FLUYR" ,
+            "description" => "Vinícius 'FLUYR' Menegatti is a Brazilian coach who previously coached for INGAMING Esports. He is a former Counter-Strike: Global Offensive player.",
+            "game_id" => 1,
+            "team_id" => 46
+        ]) ;
+
+        Player::create([
+            "image" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" ,
+            "name" => "FLUYR" ,
+            "description" => "Vinícius 'FLUYR' Menegatti is a Brazilian coach who previously coached for INGAMING Esports. He is a former Counter-Strike: Global Offensive player.",
+            "game_id" => 1,
+            "team_id" => 46
         ]) ;
 
     }

@@ -188,11 +188,12 @@ class TeamSeeder extends Seeder
 
         Team::create([
             "tournament_id" => 3,
-            "logo" => "https://static.wixstatic.com/media/0f6088_4c76444eed4842e3985459e8feb55595~mv2.png/v1/crop/x_0,y_0,w_2500,h_1229/fill/w_616,h_308,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/LOGOR7_AJUSTE2022_Mesa%20de%20trabajo%201.png",
-            "name" => "Rainbow7" ,
-            "description" => "Rainbow7 is a Mexican esports organization, founded by Karzek, FraGio and Nikez.",
+            "logo" => "https://cdn.thespike.gg/Teams%252010%2FGnGEsports_1674476507157.png",
+            "name" => "GnG Esports" ,
+            "description" => "GnG Esports (also known as Gamers and Geeks) is a Tunisian esports organization.",
             "history" => "",
         ]) ;
+
         Team::create([
             "tournament_id" => 3,
             "logo" => "https://cdn.shopify.com/s/files/1/0548/8554/8183/files/G2-Esports-2020-Logo_87bf0678-e67f-4834-8b09-e56137ffaa80.png?v=1641913940",

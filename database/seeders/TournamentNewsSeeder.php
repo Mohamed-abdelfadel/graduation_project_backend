@@ -16,6 +16,7 @@ class TournamentNewsSeeder extends Seeder
     public function run()
     {
         Tournament_news::create([
+            "id"=>100,
             "image" => "https://owcdn.net/img/60ad86ef89420.jpg",
             "title" => "penny: 'It was definitely a mental battle between the two teams'" ,
             "tournament_id" => 1,
@@ -143,6 +144,29 @@ With the opening weekend of our LEC Winter Split now behind us, we wanted to tak
             "author" => "League of legends MSI 2023",
         ]) ;
         Tournament_news::create([
+            "image" => "https://cdn.oneesports.gg/cdn-data/2023/04/LeagueofLegends_MSI2022_Trophy_Victory-1024x576.jpg" ,
+            "title" => "MSI 2023: Schedule, results, standings, format, teams, where to watch" ,
+            "tournament_id" => 1,
+            "description" => "Updated on May 9, 2:47 p.m. (GMT+8): Added bracket stage schedule.
+This year’s Mid-Season Invitational (MSI 2023) will be unlike any other.
+Earlier this year, Riot Games announced that the annual international tournament will undergo major format changes, with the inclusion of two more teams, bringing the total number of participating teams from 11 to 13.
+The major regions — LCS, LEC, LCK, and LPL — each get to fly in two representatives to London in the United Kingdom, the venue of MSI 2023.
+Here’s everything you need to know about MSI, including its schedule, results, standings, format, teams, and where to watch the tournament.
+The League of Legends Mid-Season Invitational (LoL MSI) is the first international tournament of the competitive year, held between Spring and Summer splits (except for the LEC, where it’s held between the Winter and Spring splits).
+The top teams from the Winter and Spring splits are invited to participate at MSI, which will be held at Copper Box Arena located in Queen Elizabeth Olympic Park in London.
+This year’s theme is “Defy,” where teams are expected to defy expectations, doubts, and haters to “showcase regional strength midway through the season” according to an official statement by LoL Esports.",
+            "author" => "League of legends MSI 2023",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://staticc.sportskeeda.com/editor/2023/05/214cd-16841418686918-1920.jpg" ,
+            "title" => "LoL MSI 2023: K'Sante, The Top Performer" ,
+            "tournament_id" => 1,
+            "description" => "First, let's take a look at the hard facts. K'Sante is by far one of the most popular champions at the tournament. That's evident from his 85% pick/ban rate. This value means that in 86% of all games played at the Mid-Season Invitational – as of writing this article – K'Sante was either picked or banned.
+Hey, maybe you can find some personalized K'Sante key caps on amazon!
+It's not just his presence that's insane, but he has an impressive win rate as well. K'Sante currently sits at 60%, with 15 wins and 10 losses. Need we say more? Only Vi has a higher pick/ban rate in the jungle, so K'Sante is undoubtedly the most popular top laner at MSI 2023.",
+            "author" => "",
+        ]) ;
+        Tournament_news::create([
             "image" => "https://pbs.twimg.com/media/FuOcmcFWYAI_aVm?format=jpg" ,
             "title" => "" ,
             "tournament_id" => 4,
@@ -170,13 +194,55 @@ With the opening weekend of our LEC Winter Split now behind us, we wanted to tak
             "description" => "The friendly match that brings together influencers and streamers in Turkey and the MENA region has now started!",
             "author" => "",
         ]) ;
-//        Tournament_news::create([
-//            "image" => "" ,
-//            "title" => "" ,
-//            "tournament_id" => 1,
-//            "description" => "",
-//            "author" => "",
-//        ]) ;
+        Tournament_news::create([
+            "image" => "https://rocketleague.media.zestyio.com/rl_blog_tournaments_2v2_16x9.jpg" ,
+            "title" => "Rocket League Competitive Tournaments" ,
+            "tournament_id" => 5,
+            "description" => "Competitive Tournaments offer a different way to compete. Competitive Tournaments is a Ranked mode that pits you against teams of similar skill to earn rewards. Players can join every scheduled Tournament each week. There's no limit to how many Tournaments you may join.
+Tournament Credits are earned by playing in Competitive Tournaments. These Credits can be used to purchase exclusive Tournament Items. The Credits cannot be purchased and must be earned.
+Competitive Tournaments are 32-team, single-elimination brackets based on each team's skill. Teams play one match each round until the Semifinals and Finals, which are best of three. Teams that lose the first round (or show up after the Tournament start time) can join a Second Chance bracket for another try at victory.
+Competitive Tournaments are 2v2, 3v3, and support parties or solo players. In mixed-rank parties, the highest skilled player is considered the base. If two Platinum II players team up with a Diamond I player, that team will be entered into a Diamond Tournament.
+For more info, check out: What are rank restrictions for Parties in Rocket League?
+Tournaments rely on all teams finishing their games in a timely manner so matches have a hard endpoint. Matches cannot go over 11 total minutes. This includes time spent for kickoffs and replays. If the game is tied, the team with the most shots wins. If the number of shots is the same, then the winner will be decided by a coin flip.
+Registration is open for everyone! You can register as an incomplete team, a full team, or by yourself. Once registered, you will receive a notification when the Tournament is about to start.",
+            "author" => "Collegiate Rocket League",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://rocketleague.media.zestyio.com/Tournaments_PrematchLobby_v2.jpg" ,
+            "title" => "REVAMPED TOURNAMENTS: A CLOSER LOOK" ,
+            "tournament_id" => 5,
+            "description" => "Get ready to join and compete in Rocket League's revamped in-game Tournaments, all of which are completely free to join!
+
+Players will soon be able to sign up for Competitive Tournaments, a new ranked mode within Tournaments that pits you against teams of similar skill to earn rewards. Each region has multiple Competitive Tournaments scheduled each day, so you'll have plenty of opportunities to compete. You can sign up from the revamped Tournaments Menu that shows the daily schedule for your region.
+Once a Competitive Tournament begins, we generate 32-team, single-elimination brackets based on each team's skill. Teams will play one match each round until the Semifinals and Finals, which are best of three. Teams that lose in the first round (or show up after the Tournament start time) can join a 'Second Chance' bracket for another try at victory.
+Competitive Tournaments are 3v3 at launch and support parties of all sizes, from a full squad of three to a solo-queued hopeful. Your Tournaments Rank is initially determined by your Rank from Competitive matchmaking, but changes over the course of each season depending on your Tournaments performance. Like Competitive matchmaking, we base the skill of mixed-rank parties on their highest skilled player. For example, if two Gold II players team up with a Diamond I player, that team will be entered into a Diamond Tournament.
+Win your games, move forward, and get closer to brand new rewards in Rocket League Tournaments. ",
+            "author" => "Collegiate Rocket League",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://kcgb5f9l.media.zestyio.com/Ally_NA_EU_Tournaments_FINAL--1-.jpg" ,
+            "title" => "ALLY AND ROCKET LEAGUE ESPORTS TEAM UP FOR COMMUNITY TOURNAMENTS!" ,
+            "tournament_id" => 5,
+            "description" => "Ally and Rocket League Esports have teamed up for two community tournament series in Europe and North America! Without further ado, we’re proud to introduce The Draw and Rising Stars Odyssey. Ally is proudly supporting Rocket League’s amateur and semi-pro scene with a series of tournaments across Europe and North America that’ll provide aspiring players a chance to play against some of the top Rocket League Championship Series (RLCS) players and teams in the world.
+Now you’ve got the idea, let’s jump right into the details
+The Draw is a North American series of high-stakes tournaments presented by community favorites Jamesbot and Rizzo! These tournaments will see top RLCS teams competing against new and rising talent with a $70,000 overall prize pool on the line ($14,000 per event). The Draw will consist of a total of five tournaments and ten live broadcasts, which will be broadcast live on Rizzo’s Twitch Channel. ",
+            "author" => "Collegiate Rocket League",
+        ]) ;
+        Tournament_news::create([
+            "image" => "https://kcgb5f9l.media.zestyio.com/RLCS_Community_Guidelines_01.jpg" ,
+            "title" => "ROCKET LEAGUE COMMUNITY TOURNAMENT GUIDELINES UPDATE" ,
+            "tournament_id" => 5,
+            "description" => "With the continued growth of Rocket League Esports and interest in community events, we felt it was time to update our Community Tournament Guidelines. If your tournament meets these guidelines, it is covered via the Community License and you do not need to ask Psyonix for further approval to run your tournament.
+The new guidelines are more robust to more easily plan your event. A number of adjustments have been made, but some of the larger changes are highlighted below:
+Increased the prizing and appearance fee cap from $5,000 to $15,000 per event
+Removed the annual prizing cap of $50,00
+Crowdfunding is no longer restricted to only funding the prize pool (however, it still must remain within the compensation cap of $50,000)
+All players must be at least 13 years old (or such other age, if greater, as may be required in such player’s country of residence)
+The full list of restricted sponsors is now publicly available for reference
+Clarification on the use of Rocket League marks and tournament branding
+Please be advised that in-person community Rocket League events are currently not permitted due to the ongoing. We eagerly await the moment when we can welcome back community LAN events and hope to have an update in the near future.",
+            "author" => "Collegiate Rocket League",
+        ]) ;
 
     }
 }
