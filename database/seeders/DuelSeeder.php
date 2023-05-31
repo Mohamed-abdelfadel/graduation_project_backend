@@ -160,7 +160,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 7,
             "team2_id" => 8,
             "tournament_id" => 1,
-            "starting_date" => "{$middle_date} 08:00:44",
+            "starting_date" => "{$middle_date} 12:00:44",
             "status_id" => 3
         ]) ;
         Duel::create([
@@ -173,7 +173,7 @@ class DuelSeeder extends Seeder
             "team1_id" => 8,
             "team2_id" => 10,
             "tournament_id" => 1,
-            "starting_date" => "{$middle_date} 09:06:44",
+            "starting_date" => "{$middle_date} 13:06:44",
             "status_id" => 3
         ]) ;
         Duel::create([
@@ -284,15 +284,15 @@ class DuelSeeder extends Seeder
         Duel::create([
             "playoff_id" => 6,
             "platform"=>"youtube",
-            "video_link"=>"https://www.youtube.com/embed/ksMjq5zE7Co",
+            "video_link"=>"https://www.youtube.com/embed/RkoQkUCEMog",
             "game_id" =>  2,
             "team1_score" => null,
             "team2_score" => null,
             "team1_id" => 15,
             "team2_id" => 21,
             "tournament_id" => 2,
-            "starting_date" => "{$middle_date} 10:06:44",
-            "status_id" =>3
+            "starting_date" => "{$middle_date} 13:06:44",
+            "status_id" =>2
         ]) ;
         Duel::create([
             "playoff_id" => 7 ,
@@ -439,15 +439,15 @@ class DuelSeeder extends Seeder
         Duel::create([
             "playoff_id" => 5 ,
             "game_id" =>  1,
-            "platform"=> "twitch",
-            "video_link"=> "https://player.twitch.tv/?video=1824014284",
-            "team1_score" => 2,
-            "team2_score" => 3,
+            "platform"=> "youtube",
+            "video_link"=> "https://www.youtube.com/embed/jHaxPRrWnpw",
+            "team1_score" => null,
+            "team2_score" => null,
             "team1_id" => 27,
             "team2_id" => 29,
             "tournament_id" => 3,
-            "starting_date" => "{$middle_date} 00:06:44",
-            "status_id" =>1
+            "starting_date" => "{$middle_date} 13:06:44",
+            "status_id" =>2
         ]) ;
         Duel::create([
             "playoff_id" => 6 ,
@@ -577,7 +577,7 @@ class DuelSeeder extends Seeder
             "team1_id" =>41 ,
             "team2_id" => 46,
             "tournament_id" => 5,
-            "starting_date" => "{$middle_date} 02:06:44",
+            "starting_date" => "{$middle_date} 23:06:44",
             "status_id" =>3
         ]) ;
         Duel::create([
